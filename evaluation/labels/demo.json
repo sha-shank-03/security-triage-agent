@@ -1,0 +1,37 @@
+{
+  "suite": "demo",
+  "fictional": true,
+  "cases": [
+    {
+      "case_id": "demo-001",
+      "fixture": "case-001.json",
+      "disposition": "BENIGN",
+      "urgency": "LOW",
+      "gaps": [],
+      "proposal": null
+    },
+    {
+      "case_id": "demo-002",
+      "fixture": "case-002.json",
+      "disposition": "ESCALATE",
+      "urgency": "HIGH",
+      "gaps": [],
+      "proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "session-002",
+        "target_record_id": "login-002",
+        "target_record_version": 1
+      }
+    },
+    {
+      "case_id": "demo-003",
+      "fixture": "case-003.json",
+      "disposition": "INCONCLUSIVE",
+      "urgency": "HIGH",
+      "gaps": [
+        "coverage-auth-003"
+      ],
+      "proposal": null
+    }
+  ]
+}

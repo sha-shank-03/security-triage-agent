@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "case_id": "dev-008",
+  "snapshot_version": 1,
+  "window_start": "2026-10-07T09:00:00Z",
+  "cutoff": "2026-10-07T10:00:00Z",
+  "alert": {
+    "user_id": "user-d008",
+    "device_id": "device-known-d008",
+    "ip": "198.51.100.18",
+    "session_id": "session-d008",
+    "priority": "MEDIUM"
+  },
+  "records": [
+    {
+      "id": "identity-d008",
+      "kind": "identity",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-d008",
+        "privileged": false
+      }
+    },
+    {
+      "id": "device-record-d008",
+      "kind": "device",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-d008",
+        "device_id": "device-d008",
+        "managed": true
+      }
+    },
+    {
+      "id": "network-d008",
+      "kind": "network",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-d008",
+        "ip": "198.51.100.18",
+        "approved": true,
+        "valid_from": "2026-10-01T00:00:00Z",
+        "valid_to": "2026-10-31T00:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-auth-d008",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-d008",
+        "stream": "auth",
+        "complete": true,
+        "gap": "",
+        "from": "2026-10-07T09:00:00Z",
+        "to": "2026-10-07T10:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-resource-d008",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-d008",
+        "stream": "resource",
+        "complete": true,
+        "gap": "",
+        "from": "2026-10-07T09:00:00Z",
+        "to": "2026-10-07T10:00:00Z"
+      }
+    },
+    {
+      "id": "device-known-record-d008",
+      "kind": "device",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-d008",
+        "device_id": "device-known-d008",
+        "managed": true
+      }
+    },
+    {
+      "id": "login-d008",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-10-07T09:50:00Z",
+      "ingested_at": "2026-10-07T09:50:00Z",
+      "data": {
+        "user_id": "user-d008",
+        "session_id": "session-d008",
+        "device_id": "device-d008",
+        "ip": "198.51.100.18",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    }
+  ]
+}
+

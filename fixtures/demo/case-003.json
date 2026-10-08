@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "case_id": "demo-003",
+  "snapshot_version": 1,
+  "window_start": "2026-10-07T09:00:00Z",
+  "cutoff": "2026-10-07T10:00:00Z",
+  "alert": {
+    "user_id": "user-003",
+    "device_id": "device-003",
+    "ip": "192.0.2.3",
+    "session_id": "session-003",
+    "priority": "HIGH"
+  },
+  "records": [
+    {
+      "id": "identity-003",
+      "kind": "identity",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-003",
+        "privileged": false
+      }
+    },
+    {
+      "id": "device-record-003",
+      "kind": "device",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-003",
+        "device_id": "device-003",
+        "managed": true
+      }
+    },
+    {
+      "id": "network-003",
+      "kind": "network",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-003",
+        "ip": "192.0.2.3",
+        "approved": true,
+        "valid_from": "2026-10-01T00:00:00Z",
+        "valid_to": "2026-10-31T00:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-auth-003",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-003",
+        "stream": "auth",
+        "complete": false,
+        "gap": "Authentication source missing between 09:10 and 09:40 UTC.",
+        "from": "2026-10-07T09:00:00Z",
+        "to": "2026-10-07T10:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-resource-003",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-003",
+        "stream": "resource",
+        "complete": true,
+        "gap": "",
+        "from": "2026-10-07T09:00:00Z",
+        "to": "2026-10-07T10:00:00Z"
+      }
+    },
+    {
+      "id": "login-003",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-10-07T09:50:00Z",
+      "ingested_at": "2026-10-07T09:50:00Z",
+      "data": {
+        "user_id": "user-003",
+        "session_id": "session-003",
+        "device_id": "device-003",
+        "ip": "192.0.2.3",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    }
+  ]
+}

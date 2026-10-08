@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "case_id": "dev-007",
+  "snapshot_version": 1,
+  "window_start": "2026-10-07T09:00:00Z",
+  "cutoff": "2026-10-07T10:00:00Z",
+  "alert": {
+    "user_id": "user-d007",
+    "device_id": "device-known-d007",
+    "ip": "198.51.100.17",
+    "session_id": "session-d007",
+    "priority": "HIGH"
+  },
+  "records": [
+    {
+      "id": "identity-d007",
+      "kind": "identity",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-d007",
+        "privileged": false
+      }
+    },
+    {
+      "id": "device-record-d007",
+      "kind": "device",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-d007",
+        "device_id": "device-d007",
+        "managed": false
+      }
+    },
+    {
+      "id": "network-d007",
+      "kind": "network",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-d007",
+        "ip": "198.51.100.17",
+        "approved": false,
+        "valid_from": "2026-10-01T00:00:00Z",
+        "valid_to": "2026-10-31T00:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-auth-d007",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-d007",
+        "stream": "auth",
+        "complete": true,
+        "gap": "",
+        "from": "2026-10-07T09:00:00Z",
+        "to": "2026-10-07T10:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-resource-d007",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-d007",
+        "stream": "resource",
+        "complete": true,
+        "gap": "",
+        "from": "2026-10-07T09:00:00Z",
+        "to": "2026-10-07T10:00:00Z"
+      }
+    },
+    {
+      "id": "device-known-record-d007",
+      "kind": "device",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-d007",
+        "device_id": "device-known-d007",
+        "managed": true
+      }
+    },
+    {
+      "id": "attempt-0-d007",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-10-07T09:44:00Z",
+      "ingested_at": "2026-10-07T09:44:00Z",
+      "data": {
+        "user_id": "user-d007",
+        "session_id": "attempt-0-d007",
+        "device_id": "device-d007",
+        "ip": "198.51.100.17",
+        "outcome": "failure",
+        "mfa": "unknown"
+      }
+    },
+    {
+      "id": "attempt-1-d007",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-10-07T09:46:00Z",
+      "ingested_at": "2026-10-07T09:46:00Z",
+      "data": {
+        "user_id": "user-d007",
+        "session_id": "attempt-1-d007",
+        "device_id": "device-d007",
+        "ip": "198.51.100.17",
+        "outcome": "failure",
+        "mfa": "unknown"
+      }
+    },
+    {
+      "id": "attempt-2-d007",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-10-07T09:48:00Z",
+      "ingested_at": "2026-10-07T09:48:00Z",
+      "data": {
+        "user_id": "user-d007",
+        "session_id": "attempt-2-d007",
+        "device_id": "device-d007",
+        "ip": "198.51.100.17",
+        "outcome": "failure",
+        "mfa": "unknown"
+      }
+    },
+    {
+      "id": "login-d007",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-10-07T09:50:00Z",
+      "ingested_at": "2026-10-07T09:50:00Z",
+      "data": {
+        "user_id": "user-d007",
+        "session_id": "session-d007",
+        "device_id": "device-d007",
+        "ip": "198.51.100.17",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "resource-d007",
+      "kind": "resource",
+      "version": 1,
+      "event_time": "2026-10-07T09:52:00Z",
+      "ingested_at": "2026-10-07T09:52:00Z",
+      "data": {
+        "user_id": "user-d007",
+        "session_id": "session-d007",
+        "sensitive": true
+      }
+    }
+  ]
+}
+

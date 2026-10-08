@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "split": "development",
+  "purpose": "diagnostic_only_not_heldout",
+  "cases": [
+    {
+      "case_id": "dev-001",
+      "fixture": "case-001.json",
+      "family": "network_context",
+      "world_truth": "BENIGN",
+      "allowed_dispositions": [
+        "BENIGN"
+      ],
+      "allowed_urgencies": [
+        "LOW"
+      ],
+      "required_evidence_rationale": "MFA-satisfied success on managed device at an exact approved corporate IP; both streams complete.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "session-d001"
+      ],
+      "required_gaps": []
+    },
+    {
+      "case_id": "dev-002",
+      "fixture": "case-002.json",
+      "family": "network_context",
+      "world_truth": "INCONCLUSIVE",
+      "allowed_dispositions": [
+        "INCONCLUSIVE"
+      ],
+      "allowed_urgencies": [
+        "MEDIUM"
+      ],
+      "required_evidence_rationale": "An approved address shares a prefix but is not the observed IP. This does not establish approved context or misuse.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "session-d002"
+      ],
+      "required_gaps": []
+    },
+    {
+      "case_id": "dev-003",
+      "fixture": "case-003.json",
+      "family": "travel_context",
+      "world_truth": "BENIGN",
+      "allowed_dispositions": [
+        "BENIGN"
+      ],
+      "allowed_urgencies": [
+        "LOW"
+      ],
+      "required_evidence_rationale": "Exact observed IP has current approved travel; MFA satisfied, managed device, complete streams and no adverse activity.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "session-d003"
+      ],
+      "required_gaps": []
+    },
+    {
+      "case_id": "dev-004",
+      "fixture": "case-004.json",
+      "family": "travel_context",
+      "world_truth": "INCONCLUSIVE",
+      "allowed_dispositions": [
+        "INCONCLUSIVE"
+      ],
+      "allowed_urgencies": [
+        "MEDIUM"
+      ],
+      "required_evidence_rationale": "Unknown device and unapproved IP; travel belongs to another address. No supported adverse sequence or sensitive use.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "session-d004"
+      ],
+      "required_gaps": []
+    },
+    {
+      "case_id": "dev-005",
+      "fixture": "case-005.json",
+      "family": "mfa_sequence",
+      "world_truth": "ESCALATE",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "required_evidence_rationale": "Two distinct MFA denials precede a success from the same IP/device; sensitive use shares its exact session.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "session-d005",
+        "target_record_id": "login-d005",
+        "target_record_version": 1
+      },
+      "forbidden_targets": [],
+      "required_gaps": []
+    },
+    {
+      "case_id": "dev-006",
+      "fixture": "case-006.json",
+      "family": "mfa_sequence",
+      "world_truth": "INCONCLUSIVE",
+      "allowed_dispositions": [
+        "INCONCLUSIVE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "required_evidence_rationale": "Denied attempts alone have no observed successful target session. Preserve alert urgency and propose nothing.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "session-d006"
+      ],
+      "required_gaps": []
+    },
+    {
+      "case_id": "dev-007",
+      "fixture": "case-007.json",
+      "family": "device_resource",
+      "world_truth": "ESCALATE",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "required_evidence_rationale": "Successful unmanaged device accesses a sensitive resource in the same session. Failure burst alone is not the escalation rule.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "session-d007",
+        "target_record_id": "login-d007",
+        "target_record_version": 1
+      },
+      "forbidden_targets": [],
+      "required_gaps": []
+    },
+    {
+      "case_id": "dev-008",
+      "fixture": "case-008.json",
+      "family": "device_resource",
+      "world_truth": "BENIGN",
+      "allowed_dispositions": [
+        "BENIGN"
+      ],
+      "allowed_urgencies": [
+        "LOW"
+      ],
+      "required_evidence_rationale": "Later success reveals a different managed device. Exact approved IP, MFA and complete negative resource telemetry corroborate benign context.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "session-d008"
+      ],
+      "required_gaps": []
+    },
+    {
+      "case_id": "dev-009",
+      "fixture": "case-009.json",
+      "family": "privilege",
+      "world_truth": "ESCALATE",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "CRITICAL"
+      ],
+      "required_evidence_rationale": "Privileged identity with unmanaged successful session and sensitive same-session activity requires critical urgency.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "session-d009",
+        "target_record_id": "login-d009",
+        "target_record_version": 1
+      },
+      "forbidden_targets": [],
+      "required_gaps": []
+    },
+    {
+      "case_id": "dev-010",
+      "fixture": "case-010.json",
+      "family": "privilege",
+      "world_truth": "BENIGN",
+      "allowed_dispositions": [
+        "BENIGN"
+      ],
+      "allowed_urgencies": [
+        "LOW"
+      ],
+      "required_evidence_rationale": "Privileged status raises alert priority but managed device, satisfied MFA and exact approved context corroborate this benign session.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "session-d010"
+      ],
+      "required_gaps": []
+    },
+    {
+      "case_id": "dev-011",
+      "fixture": "case-011.json",
+      "family": "coverage",
+      "world_truth": "INCONCLUSIVE",
+      "allowed_dispositions": [
+        "INCONCLUSIVE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "required_evidence_rationale": "Explicit authentication ingestion outage prevents a complete recommendation. Preserve the coverage ID and high urgency.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "session-d011"
+      ],
+      "required_gaps": [
+        "coverage-auth-d011"
+      ]
+    },
+    {
+      "case_id": "dev-012",
+      "fixture": "case-012.json",
+      "family": "coverage",
+      "world_truth": "ESCALATE",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "required_evidence_rationale": "Approved network and managed device do not erase two preceding MFA denials at the same IP/device.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "session-d012",
+        "target_record_id": "login-d012",
+        "target_record_version": 1
+      },
+      "forbidden_targets": [],
+      "required_gaps": []
+    }
+  ]
+}
+

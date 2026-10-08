@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "case_id": "dev-012",
+  "snapshot_version": 1,
+  "window_start": "2026-10-07T09:00:00Z",
+  "cutoff": "2026-10-07T10:00:00Z",
+  "alert": {
+    "user_id": "user-d012",
+    "device_id": "device-d012",
+    "ip": "198.51.100.22",
+    "session_id": "session-d012",
+    "priority": "HIGH"
+  },
+  "records": [
+    {
+      "id": "identity-d012",
+      "kind": "identity",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-d012",
+        "privileged": false
+      }
+    },
+    {
+      "id": "device-record-d012",
+      "kind": "device",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-d012",
+        "device_id": "device-d012",
+        "managed": true
+      }
+    },
+    {
+      "id": "network-d012",
+      "kind": "network",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-d012",
+        "ip": "198.51.100.22",
+        "approved": true,
+        "valid_from": "2026-10-01T00:00:00Z",
+        "valid_to": "2026-10-31T00:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-auth-d012",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-d012",
+        "stream": "auth",
+        "complete": true,
+        "gap": "",
+        "from": "2026-10-07T09:00:00Z",
+        "to": "2026-10-07T10:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-resource-d012",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-10-07T08:00:00Z",
+      "ingested_at": "2026-10-07T08:00:00Z",
+      "data": {
+        "user_id": "user-d012",
+        "stream": "resource",
+        "complete": true,
+        "gap": "",
+        "from": "2026-10-07T09:00:00Z",
+        "to": "2026-10-07T10:00:00Z"
+      }
+    },
+    {
+      "id": "attempt-0-d012",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-10-07T09:44:00Z",
+      "ingested_at": "2026-10-07T09:44:00Z",
+      "data": {
+        "user_id": "user-d012",
+        "session_id": "attempt-0-d012",
+        "device_id": "device-d012",
+        "ip": "198.51.100.22",
+        "outcome": "failure",
+        "mfa": "denied"
+      }
+    },
+    {
+      "id": "attempt-1-d012",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-10-07T09:46:00Z",
+      "ingested_at": "2026-10-07T09:46:00Z",
+      "data": {
+        "user_id": "user-d012",
+        "session_id": "attempt-1-d012",
+        "device_id": "device-d012",
+        "ip": "198.51.100.22",
+        "outcome": "failure",
+        "mfa": "denied"
+      }
+    },
+    {
+      "id": "login-d012",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-10-07T09:50:00Z",
+      "ingested_at": "2026-10-07T09:50:00Z",
+      "data": {
+        "user_id": "user-d012",
+        "session_id": "session-d012",
+        "device_id": "device-d012",
+        "ip": "198.51.100.22",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    }
+  ]
+}
+

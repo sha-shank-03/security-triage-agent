@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Development adjudication schema v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "split",
+    "purpose",
+    "cases"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "split": {
+      "const": "development"
+    },
+    "purpose": {
+      "const": "diagnostic_only_not_heldout"
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "case_id",
+          "fixture",
+          "family",
+          "world_truth",
+          "allowed_dispositions",
+          "allowed_urgencies",
+          "required_evidence_rationale",
+          "expected_proposal",
+          "forbidden_targets",
+          "required_gaps"
+        ],
+        "properties": {
+          "case_id": {
+            "type": "string",
+            "pattern": "^dev-[0-9]{3}$"
+          },
+          "fixture": {
+            "type": "string",
+            "pattern": "^case-[0-9]{3}\\.json$"
+          },
+          "family": {
+            "enum": [
+              "network_context",
+              "travel_context",
+              "mfa_sequence",
+              "device_resource",
+              "privilege",
+              "coverage"
+            ]
+          },
+          "world_truth": {
+            "enum": [
+              "BENIGN",
+              "ESCALATE",
+              "INCONCLUSIVE"
+            ]
+          },
+          "allowed_dispositions": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 3,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "BENIGN",
+                "ESCALATE",
+                "INCONCLUSIVE"
+              ]
+            }
+          },
+          "allowed_urgencies": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 4,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "LOW",
+                "MEDIUM",
+                "HIGH",
+                "CRITICAL"
+              ]
+            }
+          },
+          "required_evidence_rationale": {
+            "type": "string",
+            "minLength": 1
+          },
+          "expected_proposal": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "action",
+                  "target_session_id",
+                  "target_record_id",
+                  "target_record_version"
+                ],
+                "properties": {
+                  "action": {
+                    "const": "REVOKE_SESSION"
+                  },
+                  "target_session_id": {
+                    "type": "string"
+                  },
+                  "target_record_id": {
+                    "type": "string"
+                  },
+                  "target_record_version": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                }
+              }
+            ]
+          },
+          "forbidden_targets": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "required_gaps": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

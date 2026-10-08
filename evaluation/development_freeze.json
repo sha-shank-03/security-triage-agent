@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "split": "development",
+  "status": "frozen_before_first_scoring",
+  "baseline": "fixed_six_reads_v1",
+  "unique_cases": 12,
+  "scored_when_frozen": false,
+  "files": {
+    "docs/BASELINE.md": "f31889eb1ea3bad3d6fc74ea65792fd96ca469e5289c8b25b739ff6cf4b1156c",
+    "evaluation/label_schema.json": "17575ef74de2ce853b20e5d2cbcf9381611abb5777eba7ba0cc96028b08533f4",
+    "evaluation/labels/development.json": "c21371605d6339d7fc62564bed8dea7c34019f82022da84482aab0af6184946a",
+    "fixtures/development/case-001.json": "d606a34d6e4ac88a0febd66a4e0273fce1fb7def5c0c07c8c26e6edfdfa13caa",
+    "fixtures/development/case-002.json": "52ea702e2d1c617ef6e859452d81a6250fa22554be65a4926dafb60c5f387dfe",
+    "fixtures/development/case-003.json": "6a0dd860cc463bbe97d04d90c3aa0828b4f9951ea952b604fad55df5d37a08d1",
+    "fixtures/development/case-004.json": "2f101978974517fb17e2107f5154bda22f09f1b5d6f19b7e92cdd32ced648367",
+    "fixtures/development/case-005.json": "93e4ac60a9fe10289005c5bcafbc97f62a3305f2ab7906a7e0834887bcf6cf29",
+    "fixtures/development/case-006.json": "c5d9efeba30b536a7dc029e633583ef965def1d90e1b845a439e1f5b2df6fead",
+    "fixtures/development/case-007.json": "e675ad3b245a889482efd6b4e27db561abda9c52a65ae28f047285c6d70895f4",
+    "fixtures/development/case-008.json": "b766eee5755d3d4dcc297671cfd87226b715ae1e2697f03921c16dd981a9d230",
+    "fixtures/development/case-009.json": "b2ae033c48ad7d0a6da950bc7964fbfe47c09a980dae3cd707ab4079ff691e0f",
+    "fixtures/development/case-010.json": "8ebc16a48414990676f84a97938a62d30e21b616dab6e2951206a8bd83ad8225",
+    "fixtures/development/case-011.json": "c9dbbee1adaad4feaecc4f62fafb9634eb9c072840fed14357f02da77fdf167a",
+    "fixtures/development/case-012.json": "b99489547912fb7cc528e678012eb029f4344600600f73d2b040e62830d0ff4c",
+    "security_triage/baseline.py": "43ab26d715c35fb97bc3a0272bdfaf5975bd69d35410ab684f0af91cd03d8390",
+    "security_triage/providers.py": "762ca6fa74367b7d0775357b458c1828821aa46600b0574706d24091f7276ec6"
+  },
+  "manifest_digest": "c24d2589a14b43a6ca9ae06ed7a6d5e9af955f808418c1c362cfd1e8f809d1c9"
+}
