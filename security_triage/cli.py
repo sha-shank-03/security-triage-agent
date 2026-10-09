@@ -58,7 +58,7 @@ def main(argv=None):
             cmd.add_argument("--model")
             cmd.add_argument("--port", type=int, default=11434)
         else:
-            cmd.add_argument("--split", choices=["development"], required=True)
+            cmd.add_argument("--split", choices=["development", "heldout"], required=True)
     cmd = commands.add_parser("review", help="Record SIMULATED approval/rejection; execute nothing.")
     cmd.add_argument("--db", type=Path, required=True)
     cmd.add_argument("--proposal-id", required=True)
@@ -107,8 +107,8 @@ def main(argv=None):
             paths = ([args.fixture] if args.command == "investigate-case" else
                      sorted((ROOT / "fixtures" / args.split).glob("*.json")))
             snapshots = [strict_json(path.read_text(encoding="utf-8")) for path in paths]
-            if args.command == "investigate-suite" and len(snapshots) != 12:
-                raise ContractError("development_requires_twelve_fixtures")
+            if args.command == "investigate-suite" and len(snapshots) != {"development": 12, "heldout": 36}[args.split]:
+                raise ContractError("suite_fixture_count_mismatch")
             packet = run_snapshots(snapshots, args.out, provider, resume=args.resume, request_id=args.request_id)
         print("Mode: " + packet["mode"] + "; fictional data.")
         for case in packet["cases"]:

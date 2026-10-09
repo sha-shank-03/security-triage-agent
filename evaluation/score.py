@@ -13,9 +13,14 @@ ROOT = Path(__file__).resolve().parents[1]
 CLASSES = ("BENIGN", "ESCALATE", "INCONCLUSIVE")
 
 
-def score(run_dir):
-    freeze = check_freeze()
+def score(run_dir, assert_gates=False, review_receipt=None):
     manifest = json.loads((run_dir / "manifest.json").read_text(encoding="utf-8"))
+    if manifest["split"] == "heldout":
+        from .heldout_score import score as score_heldout
+        return score_heldout(run_dir, assert_gates, review_receipt)
+    if assert_gates:
+        raise ValueError("acceptance_gates_not_available_for_development")
+    freeze = check_freeze()
     _check(manifest["split"] == "development" and manifest["complete"]
            and manifest["freeze_digest"] == freeze["manifest_digest"], "incomplete or unfrozen development run")
     labels = json.loads((ROOT / "evaluation/labels/development.json").read_text(encoding="utf-8"))
@@ -119,11 +124,13 @@ def score(run_dir):
 def main():
     parser = argparse.ArgumentParser(description="Independent development scores, no acceptance gates.")
     parser.add_argument("--run-dir", type=Path, required=True)
+    parser.add_argument("--assert-gates", action="store_true")
+    parser.add_argument("--review-receipt", type=Path)
     args = parser.parse_args()
     try:
-        result = score(args.run_dir)
+        result = score(args.run_dir, args.assert_gates, args.review_receipt)
     except (VerificationError, OSError, sqlite3.Error, ValueError, KeyError, TypeError) as exc:
-        print("development score failed: " + str(exc))
+        print("evaluation score failed: " + str(exc))
         return 1
     print(json.dumps(result, indent=2))
     return 0

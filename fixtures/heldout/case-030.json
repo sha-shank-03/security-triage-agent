@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "case_id": "held-030",
+  "snapshot_version": 1,
+  "window_start": "2026-09-21T09:00:00Z",
+  "cutoff": "2026-09-21T10:00:00Z",
+  "alert": {
+    "user_id": "u-h030",
+    "device_id": "d-h030",
+    "ip": "192.0.2.70",
+    "session_id": "s-h030",
+    "priority": "HIGH"
+  },
+  "records": [
+    {
+      "id": "identity-h030",
+      "kind": "identity",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h030",
+        "privileged": true
+      }
+    },
+    {
+      "id": "device-h030",
+      "kind": "device",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h030",
+        "device_id": "d-h030",
+        "managed": true
+      }
+    },
+    {
+      "id": "network-h030",
+      "kind": "network",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h030",
+        "ip": "192.0.2.70",
+        "approved": false,
+        "valid_from": "2026-09-01T00:00:00Z",
+        "valid_to": "2026-09-30T00:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-auth-h030",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h030",
+        "stream": "auth",
+        "complete": true,
+        "gap": "",
+        "from": "2026-09-21T09:00:00Z",
+        "to": "2026-09-21T10:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-resource-h030",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h030",
+        "stream": "resource",
+        "complete": true,
+        "gap": "",
+        "from": "2026-09-21T09:00:00Z",
+        "to": "2026-09-21T10:00:00Z"
+      }
+    },
+    {
+      "id": "login-h030",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:50:00Z",
+      "ingested_at": "2026-09-21T09:50:00Z",
+      "data": {
+        "user_id": "u-h030",
+        "session_id": "s-h030",
+        "device_id": "d-h030",
+        "ip": "192.0.2.70",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "other-resource-h030",
+      "kind": "resource",
+      "version": 1,
+      "event_time": "2026-09-21T09:51:00Z",
+      "ingested_at": "2026-09-21T09:51:00Z",
+      "data": {
+        "user_id": "u-h030",
+        "session_id": "other-s-h030",
+        "sensitive": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "case_id": "held-021",
+  "snapshot_version": 1,
+  "window_start": "2026-09-21T09:00:00Z",
+  "cutoff": "2026-09-21T10:00:00Z",
+  "alert": {
+    "user_id": "u-h021",
+    "device_id": "old-d-h021",
+    "ip": "192.0.2.61",
+    "session_id": "s-h021",
+    "priority": "HIGH"
+  },
+  "records": [
+    {
+      "id": "identity-h021",
+      "kind": "identity",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h021",
+        "privileged": false
+      }
+    },
+    {
+      "id": "device-h021",
+      "kind": "device",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h021",
+        "device_id": "d-h021",
+        "managed": false
+      }
+    },
+    {
+      "id": "network-h021",
+      "kind": "network",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h021",
+        "ip": "192.0.2.61",
+        "approved": false,
+        "valid_from": "2026-09-01T00:00:00Z",
+        "valid_to": "2026-09-30T00:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-auth-h021",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h021",
+        "stream": "auth",
+        "complete": true,
+        "gap": "",
+        "from": "2026-09-21T09:00:00Z",
+        "to": "2026-09-21T10:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-resource-h021",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h021",
+        "stream": "resource",
+        "complete": true,
+        "gap": "",
+        "from": "2026-09-21T09:00:00Z",
+        "to": "2026-09-21T10:00:00Z"
+      }
+    },
+    {
+      "id": "old-device-h021",
+      "kind": "device",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h021",
+        "device_id": "old-d-h021",
+        "managed": true
+      }
+    },
+    {
+      "id": "attempt-0-h021",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:43:00Z",
+      "ingested_at": "2026-09-21T09:43:00Z",
+      "data": {
+        "user_id": "u-h021",
+        "session_id": "a0-h021",
+        "device_id": "d-h021",
+        "ip": "192.0.2.61",
+        "outcome": "failure",
+        "mfa": "unknown"
+      }
+    },
+    {
+      "id": "attempt-1-h021",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:45:00Z",
+      "ingested_at": "2026-09-21T09:45:00Z",
+      "data": {
+        "user_id": "u-h021",
+        "session_id": "a1-h021",
+        "device_id": "d-h021",
+        "ip": "192.0.2.61",
+        "outcome": "failure",
+        "mfa": "unknown"
+      }
+    },
+    {
+      "id": "attempt-2-h021",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:47:00Z",
+      "ingested_at": "2026-09-21T09:47:00Z",
+      "data": {
+        "user_id": "u-h021",
+        "session_id": "a2-h021",
+        "device_id": "d-h021",
+        "ip": "192.0.2.61",
+        "outcome": "failure",
+        "mfa": "unknown"
+      }
+    },
+    {
+      "id": "login-h021",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:50:00Z",
+      "ingested_at": "2026-09-21T09:50:00Z",
+      "data": {
+        "user_id": "u-h021",
+        "session_id": "s-h021",
+        "device_id": "d-h021",
+        "ip": "192.0.2.61",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "resource-h021",
+      "kind": "resource",
+      "version": 1,
+      "event_time": "2026-09-21T09:52:00Z",
+      "ingested_at": "2026-09-21T09:52:00Z",
+      "data": {
+        "user_id": "u-h021",
+        "session_id": "s-h021",
+        "sensitive": true
+      }
+    }
+  ]
+}

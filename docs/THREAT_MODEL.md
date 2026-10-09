@@ -23,8 +23,7 @@ system, containment executor or account write exists.
 The protocol harness contains only owned short-lived loopback servers and a
 single explicitly launched crash-test child. They are not started on import.
 No unrelated process is stopped. M2 integration execution of these harnesses is
-complete in the worker's M2 checks; independent maintainer acceptance remains
-pending. The full suite passed 48 tests, including owned crash recovery, real
+independently accepted for M2 and repeated in final M3 acceptance. The final full suite passed 65 tests, including owned crash recovery, real
 loopback continuation/failure bounds and immutable source evidence after
 APPROVED_SIMULATION. See EVIDENCE.md for the initial timeout-double traceback
 and its bounded correction.

@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Heldout adjudication schema v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "dataset_version",
+    "split",
+    "purpose",
+    "cases"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 2
+    },
+    "dataset_version": {
+      "const": "heldout-v1"
+    },
+    "split": {
+      "const": "heldout"
+    },
+    "purpose": {
+      "const": "same_author_scripted_regression_not_independent_population"
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 36,
+      "maxItems": 36,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "case_id",
+          "fixture",
+          "family",
+          "world_truth",
+          "reference_urgency",
+          "allowed_dispositions",
+          "allowed_urgencies",
+          "required_evidence_rationale",
+          "expected_proposal",
+          "forbidden_targets",
+          "required_gaps",
+          "acceptable_evidence_tuples",
+          "required_evidence_groups",
+          "coverage_requirements"
+        ],
+        "properties": {
+          "case_id": {
+            "type": "string",
+            "pattern": "^held-[0-9]{3}$"
+          },
+          "fixture": {
+            "type": "string",
+            "pattern": "^case-[0-9]{3}\\.json$"
+          },
+          "family": {
+            "enum": [
+              "network",
+              "travel",
+              "mfa",
+              "failures",
+              "resource",
+              "telemetry"
+            ]
+          },
+          "world_truth": {
+            "enum": [
+              "BENIGN",
+              "ESCALATE",
+              "INCONCLUSIVE"
+            ]
+          },
+          "reference_urgency": {
+            "enum": [
+              "LOW",
+              "MEDIUM",
+              "HIGH",
+              "CRITICAL"
+            ]
+          },
+          "allowed_dispositions": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "BENIGN",
+                "ESCALATE",
+                "INCONCLUSIVE"
+              ]
+            }
+          },
+          "allowed_urgencies": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "LOW",
+                "MEDIUM",
+                "HIGH",
+                "CRITICAL"
+              ]
+            }
+          },
+          "required_evidence_rationale": {
+            "type": "string",
+            "minLength": 1
+          },
+          "expected_proposal": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "action",
+                  "target_session_id",
+                  "target_record_id",
+                  "target_record_version"
+                ],
+                "properties": {
+                  "action": {
+                    "const": "REVOKE_SESSION"
+                  },
+                  "target_session_id": {
+                    "type": "string"
+                  },
+                  "target_record_id": {
+                    "type": "string"
+                  },
+                  "target_record_version": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                }
+              }
+            ]
+          },
+          "forbidden_targets": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "required_gaps": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "acceptable_evidence_tuples": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "kind",
+                "record_id",
+                "record_version",
+                "value"
+              ],
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "AUTH_SUCCESS",
+                    "MFA_DENIED",
+                    "DEVICE_MANAGED",
+                    "NETWORK_APPROVED",
+                    "TRAVEL_APPROVED",
+                    "RESOURCE_SENSITIVE",
+                    "COVERAGE_COMPLETE"
+                  ]
+                },
+                "record_id": {
+                  "type": "string"
+                },
+                "record_version": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "value": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "required_evidence_groups": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "purpose",
+                "alternatives"
+              ],
+              "properties": {
+                "purpose": {
+                  "type": "string"
+                },
+                "alternatives": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "array",
+                    "minItems": 1,
+                    "uniqueItems": true,
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "coverage_requirements": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "auth",
+              "resource"
+            ],
+            "properties": {
+              "auth": {
+                "type": "boolean"
+              },
+              "resource": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

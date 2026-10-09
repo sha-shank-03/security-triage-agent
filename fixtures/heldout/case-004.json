@@ -1,0 +1,849 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "case_id": "held-004",
+  "snapshot_version": 1,
+  "window_start": "2026-09-21T09:00:00Z",
+  "cutoff": "2026-09-21T10:00:00Z",
+  "alert": {
+    "user_id": "u-h004",
+    "device_id": "d-h004",
+    "ip": "192.0.2.44",
+    "session_id": "s-h004",
+    "priority": "MEDIUM"
+  },
+  "records": [
+    {
+      "id": "identity-h004",
+      "kind": "identity",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h004",
+        "privileged": false
+      }
+    },
+    {
+      "id": "device-h004",
+      "kind": "device",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h004",
+        "device_id": "d-h004",
+        "managed": true
+      }
+    },
+    {
+      "id": "network-h004",
+      "kind": "network",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h004",
+        "ip": "192.0.2.44",
+        "approved": true,
+        "valid_from": "2026-09-01T00:00:00Z",
+        "valid_to": "2026-09-30T00:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-auth-h004",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h004",
+        "stream": "auth",
+        "complete": true,
+        "gap": "",
+        "from": "2026-09-21T09:00:00Z",
+        "to": "2026-09-21T10:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-resource-h004",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h004",
+        "stream": "resource",
+        "complete": true,
+        "gap": "",
+        "from": "2026-09-21T09:00:00Z",
+        "to": "2026-09-21T10:00:00Z"
+      }
+    },
+    {
+      "id": "page-0-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:01:00Z",
+      "ingested_at": "2026-09-21T09:01:00Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p0-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-1-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:01:45Z",
+      "ingested_at": "2026-09-21T09:01:45Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p1-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-2-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:02:30Z",
+      "ingested_at": "2026-09-21T09:02:30Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p2-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-3-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:03:15Z",
+      "ingested_at": "2026-09-21T09:03:15Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p3-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-4-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:04:00Z",
+      "ingested_at": "2026-09-21T09:04:00Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p4-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-5-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:04:45Z",
+      "ingested_at": "2026-09-21T09:04:45Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p5-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-6-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:05:30Z",
+      "ingested_at": "2026-09-21T09:05:30Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p6-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-7-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:06:15Z",
+      "ingested_at": "2026-09-21T09:06:15Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p7-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-8-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:07:00Z",
+      "ingested_at": "2026-09-21T09:07:00Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p8-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-9-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:07:45Z",
+      "ingested_at": "2026-09-21T09:07:45Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p9-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-10-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:08:30Z",
+      "ingested_at": "2026-09-21T09:08:30Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p10-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-11-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:09:15Z",
+      "ingested_at": "2026-09-21T09:09:15Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p11-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-12-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:10:00Z",
+      "ingested_at": "2026-09-21T09:10:00Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p12-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-13-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:10:45Z",
+      "ingested_at": "2026-09-21T09:10:45Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p13-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-14-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:11:30Z",
+      "ingested_at": "2026-09-21T09:11:30Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p14-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-15-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:12:15Z",
+      "ingested_at": "2026-09-21T09:12:15Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p15-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-16-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:13:00Z",
+      "ingested_at": "2026-09-21T09:13:00Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p16-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-17-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:13:45Z",
+      "ingested_at": "2026-09-21T09:13:45Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p17-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-18-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:14:30Z",
+      "ingested_at": "2026-09-21T09:14:30Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p18-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-19-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:15:15Z",
+      "ingested_at": "2026-09-21T09:15:15Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p19-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-20-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:16:00Z",
+      "ingested_at": "2026-09-21T09:16:00Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p20-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-21-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:16:45Z",
+      "ingested_at": "2026-09-21T09:16:45Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p21-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-22-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:17:30Z",
+      "ingested_at": "2026-09-21T09:17:30Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p22-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-23-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:18:15Z",
+      "ingested_at": "2026-09-21T09:18:15Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p23-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-24-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:19:00Z",
+      "ingested_at": "2026-09-21T09:19:00Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p24-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-25-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:19:45Z",
+      "ingested_at": "2026-09-21T09:19:45Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p25-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-26-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:20:30Z",
+      "ingested_at": "2026-09-21T09:20:30Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p26-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-27-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:21:15Z",
+      "ingested_at": "2026-09-21T09:21:15Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p27-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-28-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:22:00Z",
+      "ingested_at": "2026-09-21T09:22:00Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p28-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-29-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:22:45Z",
+      "ingested_at": "2026-09-21T09:22:45Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p29-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-30-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:23:30Z",
+      "ingested_at": "2026-09-21T09:23:30Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p30-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-31-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:24:15Z",
+      "ingested_at": "2026-09-21T09:24:15Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p31-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-32-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:25:00Z",
+      "ingested_at": "2026-09-21T09:25:00Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p32-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-33-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:25:45Z",
+      "ingested_at": "2026-09-21T09:25:45Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p33-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-34-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:26:30Z",
+      "ingested_at": "2026-09-21T09:26:30Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p34-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-35-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:27:15Z",
+      "ingested_at": "2026-09-21T09:27:15Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p35-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-36-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:28:00Z",
+      "ingested_at": "2026-09-21T09:28:00Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p36-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-37-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:28:45Z",
+      "ingested_at": "2026-09-21T09:28:45Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p37-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-38-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:29:30Z",
+      "ingested_at": "2026-09-21T09:29:30Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p38-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-39-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:30:15Z",
+      "ingested_at": "2026-09-21T09:30:15Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p39-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-40-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:31:00Z",
+      "ingested_at": "2026-09-21T09:31:00Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p40-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-41-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:31:45Z",
+      "ingested_at": "2026-09-21T09:31:45Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p41-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-42-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:32:30Z",
+      "ingested_at": "2026-09-21T09:32:30Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p42-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-43-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:33:15Z",
+      "ingested_at": "2026-09-21T09:33:15Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p43-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-44-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:34:00Z",
+      "ingested_at": "2026-09-21T09:34:00Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p44-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-45-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:34:45Z",
+      "ingested_at": "2026-09-21T09:34:45Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p45-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-46-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:35:30Z",
+      "ingested_at": "2026-09-21T09:35:30Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p46-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-47-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:36:15Z",
+      "ingested_at": "2026-09-21T09:36:15Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p47-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-48-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:37:00Z",
+      "ingested_at": "2026-09-21T09:37:00Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p48-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "page-49-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:37:45Z",
+      "ingested_at": "2026-09-21T09:37:45Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "p49-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "login-h004",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:50:00Z",
+      "ingested_at": "2026-09-21T09:50:00Z",
+      "data": {
+        "user_id": "u-h004",
+        "session_id": "s-h004",
+        "device_id": "d-h004",
+        "ip": "192.0.2.44",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    }
+  ]
+}

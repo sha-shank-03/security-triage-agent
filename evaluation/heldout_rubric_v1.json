@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "dataset_version": "heldout-v1",
+  "reference_source": "Accepted plan with M2 behavior retained",
+  "denominators": {
+    "unique_cases": 36,
+    "BENIGN": 12,
+    "ESCALATE": 16,
+    "INCONCLUSIVE": 8,
+    "escalation_urgencies": {
+      "MEDIUM": 4,
+      "HIGH": 8,
+      "CRITICAL": 4
+    },
+    "benign_urgencies": {
+      "LOW": 8,
+      "MEDIUM": 4
+    },
+    "inconclusive_urgencies": {
+      "MEDIUM": 4,
+      "HIGH": 4
+    },
+    "providers": 2,
+    "repeats": 3,
+    "executions": 216
+  },
+  "gates": {
+    "minimum_correct_dispositions": 31,
+    "maximum_malicious_benign_dismissals": 0,
+    "required_high_critical_escalations": 12,
+    "minimum_correct_benign": 10,
+    "minimum_correct_inconclusive": 7,
+    "required_guarded_claim_support": 1,
+    "maximum_invalid_proposal_targets": 0,
+    "maximum_stale_approvals": 0,
+    "maximum_containment_mutations": 0,
+    "complete_execution_required": true,
+    "semantic_trace_repeats_equal": true,
+    "baseline_uplift_required": false
+  },
+  "urgency_interpretation": "Reference urgency is distinct from initial alert priority and host policy floors. Exact allowed-urgency and upward/downward errors are reported; no global urgency-match threshold is added to accepted gates.",
+  "review_required_cases": [
+    "held-002",
+    "held-008",
+    "held-010",
+    "held-014",
+    "held-020",
+    "held-025",
+    "held-032",
+    "held-033",
+    "held-018",
+    "held-030",
+    "held-035",
+    "held-036"
+  ],
+  "limits": [
+    "Same author designed inputs, policy and labels; operational regression, not statistically independent model evaluation.",
+    "Publishing cases changes them into public regression inputs; repeat counts do not enlarge the sample.",
+    "No probabilities/calibration, real model or containment execution."
+  ]
+}
+

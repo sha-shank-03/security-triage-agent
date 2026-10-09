@@ -1,0 +1,4238 @@
+{
+  "schema_version": 2,
+  "dataset_version": "heldout-v1",
+  "split": "heldout",
+  "purpose": "same_author_scripted_regression_not_independent_population",
+  "cases": [
+    {
+      "case_id": "held-001",
+      "fixture": "case-001.json",
+      "family": "network",
+      "world_truth": "BENIGN",
+      "reference_urgency": "LOW",
+      "allowed_dispositions": [
+        "BENIGN"
+      ],
+      "allowed_urgencies": [
+        "LOW"
+      ],
+      "required_evidence_rationale": "Complete auth/resource window, satisfied MFA, managed target device and exact approved context; no visible contrary event.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "s-h001"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h001",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h001",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h001",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h001",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h001",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h001",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h001",
+              "coverage-resource-h001"
+            ]
+          ]
+        },
+        {
+          "purpose": "benign_corroboration",
+          "alternatives": [
+            [
+              "login-h001",
+              "device-h001",
+              "network-h001"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-002",
+      "fixture": "case-002.json",
+      "family": "network",
+      "world_truth": "BENIGN",
+      "reference_urgency": "MEDIUM",
+      "allowed_dispositions": [
+        "BENIGN"
+      ],
+      "allowed_urgencies": [
+        "MEDIUM"
+      ],
+      "required_evidence_rationale": "Complete auth/resource window, satisfied MFA, managed target device and exact approved context; no visible contrary event. Reference MEDIUM is the plan's analyst follow-up stratum; accepted host urgency defaults are intentionally not rewritten to match it.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "s-h002"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h002",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h002",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h002",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h002",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h002",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h002",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h002",
+              "coverage-resource-h002"
+            ]
+          ]
+        },
+        {
+          "purpose": "benign_corroboration",
+          "alternatives": [
+            [
+              "login-h002",
+              "device-h002",
+              "network-h002"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-003",
+      "fixture": "case-003.json",
+      "family": "network",
+      "world_truth": "BENIGN",
+      "reference_urgency": "LOW",
+      "allowed_dispositions": [
+        "BENIGN"
+      ],
+      "allowed_urgencies": [
+        "LOW"
+      ],
+      "required_evidence_rationale": "Complete auth/resource window, satisfied MFA, managed target device and exact approved context; no visible contrary event.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "excluded-0-h003",
+        "excluded-1-h003",
+        "s-h003"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h003",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h003",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h003",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h003",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h003",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h003",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h003",
+              "coverage-resource-h003"
+            ]
+          ]
+        },
+        {
+          "purpose": "benign_corroboration",
+          "alternatives": [
+            [
+              "login-h003",
+              "device-h003",
+              "network-h003"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-004",
+      "fixture": "case-004.json",
+      "family": "network",
+      "world_truth": "BENIGN",
+      "reference_urgency": "LOW",
+      "allowed_dispositions": [
+        "BENIGN"
+      ],
+      "allowed_urgencies": [
+        "LOW"
+      ],
+      "required_evidence_rationale": "Complete auth/resource window, satisfied MFA, managed target device and exact approved context; no visible contrary event.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "p0-h004",
+        "p1-h004",
+        "p10-h004",
+        "p11-h004",
+        "p12-h004",
+        "p13-h004",
+        "p14-h004",
+        "p15-h004",
+        "p16-h004",
+        "p17-h004",
+        "p18-h004",
+        "p19-h004",
+        "p2-h004",
+        "p20-h004",
+        "p21-h004",
+        "p22-h004",
+        "p23-h004",
+        "p24-h004",
+        "p25-h004",
+        "p26-h004",
+        "p27-h004",
+        "p28-h004",
+        "p29-h004",
+        "p3-h004",
+        "p30-h004",
+        "p31-h004",
+        "p32-h004",
+        "p33-h004",
+        "p34-h004",
+        "p35-h004",
+        "p36-h004",
+        "p37-h004",
+        "p38-h004",
+        "p39-h004",
+        "p4-h004",
+        "p40-h004",
+        "p41-h004",
+        "p42-h004",
+        "p43-h004",
+        "p44-h004",
+        "p45-h004",
+        "p46-h004",
+        "p47-h004",
+        "p48-h004",
+        "p49-h004",
+        "p5-h004",
+        "p6-h004",
+        "p7-h004",
+        "p8-h004",
+        "p9-h004",
+        "s-h004"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-0-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-0-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-1-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-1-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-2-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-2-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-3-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-3-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-4-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-4-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-5-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-5-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-6-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-6-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-7-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-7-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-8-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-8-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-9-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-9-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-10-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-10-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-11-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-11-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-12-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-12-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-13-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-13-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-14-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-14-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-15-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-15-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-16-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-16-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-17-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-17-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-18-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-18-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-19-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-19-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-20-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-20-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-21-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-21-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-22-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-22-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-23-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-23-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-24-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-24-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-25-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-25-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-26-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-26-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-27-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-27-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-28-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-28-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-29-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-29-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-30-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-30-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-31-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-31-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-32-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-32-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-33-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-33-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-34-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-34-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-35-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-35-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-36-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-36-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-37-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-37-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-38-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-38-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-39-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-39-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-40-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-40-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-41-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-41-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-42-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-42-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-43-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-43-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-44-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-44-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-45-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-45-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-46-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-46-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-47-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-47-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-48-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-48-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "page-49-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "page-49-h004",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h004",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h004",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h004",
+              "coverage-resource-h004"
+            ]
+          ]
+        },
+        {
+          "purpose": "benign_corroboration",
+          "alternatives": [
+            [
+              "login-h004",
+              "device-h004",
+              "network-h004"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-005",
+      "fixture": "case-005.json",
+      "family": "network",
+      "world_truth": "ESCALATE",
+      "reference_urgency": "HIGH",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "required_evidence_rationale": "Observed distinct MFA denials before the exact successful IP/device.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "s-h005",
+        "target_record_id": "login-h005",
+        "target_record_version": 1
+      },
+      "forbidden_targets": [
+        "a0-h005",
+        "a1-h005"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h005",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h005",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h005",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h005",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-0-h005",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-0-h005",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-1-h005",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-1-h005",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h005",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h005",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h005",
+              "coverage-resource-h005"
+            ]
+          ]
+        },
+        {
+          "purpose": "positive_adverse_linkage",
+          "alternatives": [
+            [
+              "login-h005",
+              "attempt-0-h005",
+              "attempt-1-h005"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-006",
+      "fixture": "case-006.json",
+      "family": "network",
+      "world_truth": "INCONCLUSIVE",
+      "reference_urgency": "MEDIUM",
+      "allowed_dispositions": [
+        "INCONCLUSIVE"
+      ],
+      "allowed_urgencies": [
+        "MEDIUM"
+      ],
+      "required_evidence_rationale": "Approved prefix lookalike is a different address; no confirmed approval or adverse linkage.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "s-h006"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h006",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h006",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h006",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h006",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "other-network-h006",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h006",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h006",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h006",
+              "coverage-resource-h006"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-007",
+      "fixture": "case-007.json",
+      "family": "travel",
+      "world_truth": "BENIGN",
+      "reference_urgency": "LOW",
+      "allowed_dispositions": [
+        "BENIGN"
+      ],
+      "allowed_urgencies": [
+        "LOW"
+      ],
+      "required_evidence_rationale": "Complete auth/resource window, satisfied MFA, managed target device and exact approved context; no visible contrary event.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "s-h007"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h007",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h007",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h007",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h007",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "TRAVEL_APPROVED",
+          "record_id": "travel-h007",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h007",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h007",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h007",
+              "coverage-resource-h007"
+            ]
+          ]
+        },
+        {
+          "purpose": "benign_corroboration",
+          "alternatives": [
+            [
+              "login-h007",
+              "device-h007",
+              "travel-h007"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-008",
+      "fixture": "case-008.json",
+      "family": "travel",
+      "world_truth": "BENIGN",
+      "reference_urgency": "MEDIUM",
+      "allowed_dispositions": [
+        "BENIGN"
+      ],
+      "allowed_urgencies": [
+        "MEDIUM"
+      ],
+      "required_evidence_rationale": "Complete auth/resource window, satisfied MFA, managed target device and exact approved context; no visible contrary event. Reference MEDIUM is the plan's analyst follow-up stratum; accepted host urgency defaults are intentionally not rewritten to match it.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "s-h008"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h008",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h008",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h008",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h008",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "TRAVEL_APPROVED",
+          "record_id": "travel-h008",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h008",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h008",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h008",
+              "coverage-resource-h008"
+            ]
+          ]
+        },
+        {
+          "purpose": "benign_corroboration",
+          "alternatives": [
+            [
+              "login-h008",
+              "device-h008",
+              "travel-h008"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-009",
+      "fixture": "case-009.json",
+      "family": "travel",
+      "world_truth": "BENIGN",
+      "reference_urgency": "LOW",
+      "allowed_dispositions": [
+        "BENIGN"
+      ],
+      "allowed_urgencies": [
+        "LOW"
+      ],
+      "required_evidence_rationale": "Complete auth/resource window, satisfied MFA, managed target device and exact approved context; no visible contrary event.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "s-h009"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h009",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h009",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h009",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h009",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "old-device-h009",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "TRAVEL_APPROVED",
+          "record_id": "travel-h009",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h009",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h009",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h009",
+              "coverage-resource-h009"
+            ]
+          ]
+        },
+        {
+          "purpose": "benign_corroboration",
+          "alternatives": [
+            [
+              "login-h009",
+              "device-h009",
+              "travel-h009"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-010",
+      "fixture": "case-010.json",
+      "family": "travel",
+      "world_truth": "BENIGN",
+      "reference_urgency": "MEDIUM",
+      "allowed_dispositions": [
+        "BENIGN"
+      ],
+      "allowed_urgencies": [
+        "MEDIUM"
+      ],
+      "required_evidence_rationale": "Complete auth/resource window, satisfied MFA, managed target device and exact approved context; no visible contrary event. Reference MEDIUM is the plan's analyst follow-up stratum; accepted host urgency defaults are intentionally not rewritten to match it.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "s-h010"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h010",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h010",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h010",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h010",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "TRAVEL_APPROVED",
+          "record_id": "travel-h010",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h010",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h010",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h010",
+              "coverage-resource-h010"
+            ]
+          ]
+        },
+        {
+          "purpose": "benign_corroboration",
+          "alternatives": [
+            [
+              "login-h010",
+              "device-h010",
+              "travel-h010"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-011",
+      "fixture": "case-011.json",
+      "family": "travel",
+      "world_truth": "ESCALATE",
+      "reference_urgency": "HIGH",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "required_evidence_rationale": "Observed distinct MFA denials before the exact successful IP/device.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "s-h011",
+        "target_record_id": "login-h011",
+        "target_record_version": 1
+      },
+      "forbidden_targets": [
+        "a0-h011",
+        "a1-h011"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h011",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h011",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h011",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h011",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "TRAVEL_APPROVED",
+          "record_id": "travel-h011",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-0-h011",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-0-h011",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-1-h011",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-1-h011",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h011",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h011",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "RESOURCE_SENSITIVE",
+          "record_id": "resource-h011",
+          "record_version": 1,
+          "value": true
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h011",
+              "coverage-resource-h011"
+            ]
+          ]
+        },
+        {
+          "purpose": "positive_adverse_linkage",
+          "alternatives": [
+            [
+              "login-h011",
+              "attempt-0-h011",
+              "attempt-1-h011"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-012",
+      "fixture": "case-012.json",
+      "family": "travel",
+      "world_truth": "INCONCLUSIVE",
+      "reference_urgency": "MEDIUM",
+      "allowed_dispositions": [
+        "INCONCLUSIVE"
+      ],
+      "allowed_urgencies": [
+        "MEDIUM"
+      ],
+      "required_evidence_rationale": "Travel expires one second before cutoff; it cannot corroborate the whole interval.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "s-h012"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h012",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h012",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h012",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h012",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "TRAVEL_APPROVED",
+          "record_id": "travel-h012",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h012",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h012",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h012",
+              "coverage-resource-h012"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-013",
+      "fixture": "case-013.json",
+      "family": "mfa",
+      "world_truth": "BENIGN",
+      "reference_urgency": "LOW",
+      "allowed_dispositions": [
+        "BENIGN"
+      ],
+      "allowed_urgencies": [
+        "LOW"
+      ],
+      "required_evidence_rationale": "Complete auth/resource window, satisfied MFA, managed target device and exact approved context; no visible contrary event.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "excluded-0-h013",
+        "excluded-1-h013",
+        "s-h013"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h013",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h013",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h013",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h013",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h013",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h013",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h013",
+              "coverage-resource-h013"
+            ]
+          ]
+        },
+        {
+          "purpose": "benign_corroboration",
+          "alternatives": [
+            [
+              "login-h013",
+              "device-h013",
+              "network-h013"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-014",
+      "fixture": "case-014.json",
+      "family": "mfa",
+      "world_truth": "ESCALATE",
+      "reference_urgency": "MEDIUM",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "MEDIUM"
+      ],
+      "required_evidence_rationale": "Observed distinct MFA denials before the exact successful IP/device. Reference MEDIUM is the plan's analyst follow-up stratum; accepted host urgency defaults are intentionally not rewritten to match it.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "s-h014",
+        "target_record_id": "login-h014",
+        "target_record_version": 1
+      },
+      "forbidden_targets": [
+        "a0-h014",
+        "a1-h014"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h014",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h014",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h014",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h014",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-0-h014",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-0-h014",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-1-h014",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-1-h014",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h014",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h014",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h014",
+              "coverage-resource-h014"
+            ]
+          ]
+        },
+        {
+          "purpose": "positive_adverse_linkage",
+          "alternatives": [
+            [
+              "login-h014",
+              "attempt-0-h014",
+              "attempt-1-h014"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-015",
+      "fixture": "case-015.json",
+      "family": "mfa",
+      "world_truth": "ESCALATE",
+      "reference_urgency": "HIGH",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "required_evidence_rationale": "Observed distinct MFA denials before the exact successful IP/device.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "s-h015",
+        "target_record_id": "login-h015",
+        "target_record_version": 1
+      },
+      "forbidden_targets": [
+        "a0-h015",
+        "a1-h015"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h015",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h015",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h015",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h015",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-0-h015",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-0-h015",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-1-h015",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-1-h015",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h015",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h015",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h015",
+              "coverage-resource-h015"
+            ]
+          ]
+        },
+        {
+          "purpose": "positive_adverse_linkage",
+          "alternatives": [
+            [
+              "login-h015",
+              "attempt-0-h015",
+              "attempt-1-h015"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-016",
+      "fixture": "case-016.json",
+      "family": "mfa",
+      "world_truth": "ESCALATE",
+      "reference_urgency": "HIGH",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "required_evidence_rationale": "Observed distinct MFA denials before the exact successful IP/device.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "s-h016",
+        "target_record_id": "login-h016",
+        "target_record_version": 1
+      },
+      "forbidden_targets": [
+        "a0-h016",
+        "a1-h016"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h016",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h016",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h016",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h016",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "old-device-h016",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-0-h016",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-0-h016",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-1-h016",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-1-h016",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h016",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h016",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h016",
+              "coverage-resource-h016"
+            ]
+          ]
+        },
+        {
+          "purpose": "positive_adverse_linkage",
+          "alternatives": [
+            [
+              "login-h016",
+              "attempt-0-h016",
+              "attempt-1-h016"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-017",
+      "fixture": "case-017.json",
+      "family": "mfa",
+      "world_truth": "ESCALATE",
+      "reference_urgency": "CRITICAL",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "CRITICAL"
+      ],
+      "required_evidence_rationale": "Observed distinct MFA denials before the exact successful IP/device.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "s-h017",
+        "target_record_id": "login-h017",
+        "target_record_version": 1
+      },
+      "forbidden_targets": [
+        "a0-h017",
+        "a1-h017"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h017",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h017",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h017",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h017",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-0-h017",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-0-h017",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-1-h017",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-1-h017",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h017",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h017",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h017",
+              "coverage-resource-h017"
+            ]
+          ]
+        },
+        {
+          "purpose": "positive_adverse_linkage",
+          "alternatives": [
+            [
+              "login-h017",
+              "attempt-0-h017",
+              "attempt-1-h017"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-018",
+      "fixture": "case-018.json",
+      "family": "mfa",
+      "world_truth": "INCONCLUSIVE",
+      "reference_urgency": "HIGH",
+      "allowed_dispositions": [
+        "INCONCLUSIVE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "required_evidence_rationale": "Denials have a different IP from the successful session; unapproved context remains unresolved.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "a0-h018",
+        "a1-h018",
+        "s-h018"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h018",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h018",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h018",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h018",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-0-h018",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-0-h018",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-1-h018",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-1-h018",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h018",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h018",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h018",
+              "coverage-resource-h018"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-019",
+      "fixture": "case-019.json",
+      "family": "failures",
+      "world_truth": "BENIGN",
+      "reference_urgency": "LOW",
+      "allowed_dispositions": [
+        "BENIGN"
+      ],
+      "allowed_urgencies": [
+        "LOW"
+      ],
+      "required_evidence_rationale": "Complete auth/resource window, satisfied MFA, managed target device and exact approved context; no visible contrary event.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "a0-h019",
+        "a1-h019",
+        "a2-h019",
+        "s-h019"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h019",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h019",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h019",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h019",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-0-h019",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-0-h019",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-1-h019",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-1-h019",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-2-h019",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-2-h019",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h019",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h019",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h019",
+              "coverage-resource-h019"
+            ]
+          ]
+        },
+        {
+          "purpose": "benign_corroboration",
+          "alternatives": [
+            [
+              "login-h019",
+              "device-h019",
+              "network-h019"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-020",
+      "fixture": "case-020.json",
+      "family": "failures",
+      "world_truth": "ESCALATE",
+      "reference_urgency": "MEDIUM",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "MEDIUM"
+      ],
+      "required_evidence_rationale": "Observed unmanaged successful device and sensitive activity in the exact successful session. Reference MEDIUM is the plan's analyst follow-up stratum; accepted host urgency defaults are intentionally not rewritten to match it.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "s-h020",
+        "target_record_id": "login-h020",
+        "target_record_version": 1
+      },
+      "forbidden_targets": [
+        "a0-h020",
+        "a1-h020",
+        "a2-h020"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h020",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h020",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h020",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h020",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-0-h020",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-0-h020",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-1-h020",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-1-h020",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-2-h020",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-2-h020",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h020",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h020",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "RESOURCE_SENSITIVE",
+          "record_id": "resource-h020",
+          "record_version": 1,
+          "value": true
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h020",
+              "coverage-resource-h020"
+            ]
+          ]
+        },
+        {
+          "purpose": "positive_adverse_linkage",
+          "alternatives": [
+            [
+              "login-h020",
+              "device-h020",
+              "resource-h020"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-021",
+      "fixture": "case-021.json",
+      "family": "failures",
+      "world_truth": "ESCALATE",
+      "reference_urgency": "HIGH",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "required_evidence_rationale": "Observed unmanaged successful device and sensitive activity in the exact successful session.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "s-h021",
+        "target_record_id": "login-h021",
+        "target_record_version": 1
+      },
+      "forbidden_targets": [
+        "a0-h021",
+        "a1-h021",
+        "a2-h021"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h021",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h021",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h021",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h021",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "old-device-h021",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-0-h021",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-0-h021",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-1-h021",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-1-h021",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-2-h021",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-2-h021",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h021",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h021",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "RESOURCE_SENSITIVE",
+          "record_id": "resource-h021",
+          "record_version": 1,
+          "value": true
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h021",
+              "coverage-resource-h021"
+            ]
+          ]
+        },
+        {
+          "purpose": "positive_adverse_linkage",
+          "alternatives": [
+            [
+              "login-h021",
+              "device-h021",
+              "resource-h021"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-022",
+      "fixture": "case-022.json",
+      "family": "failures",
+      "world_truth": "ESCALATE",
+      "reference_urgency": "HIGH",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "required_evidence_rationale": "Observed unmanaged successful device and sensitive activity in the exact successful session.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "s-h022",
+        "target_record_id": "login-h022",
+        "target_record_version": 1
+      },
+      "forbidden_targets": [
+        "a0-h022",
+        "a1-h022",
+        "a2-h022"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h022",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h022",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h022",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h022",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-0-h022",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-0-h022",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-1-h022",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-1-h022",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-2-h022",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-2-h022",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h022",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h022",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "RESOURCE_SENSITIVE",
+          "record_id": "other-resource-h022",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "RESOURCE_SENSITIVE",
+          "record_id": "resource-h022",
+          "record_version": 1,
+          "value": true
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h022",
+              "coverage-resource-h022"
+            ]
+          ]
+        },
+        {
+          "purpose": "positive_adverse_linkage",
+          "alternatives": [
+            [
+              "login-h022",
+              "device-h022",
+              "resource-h022"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-023",
+      "fixture": "case-023.json",
+      "family": "failures",
+      "world_truth": "ESCALATE",
+      "reference_urgency": "CRITICAL",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "CRITICAL"
+      ],
+      "required_evidence_rationale": "Observed unmanaged successful device and sensitive activity in the exact successful session.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "s-h023",
+        "target_record_id": "login-h023",
+        "target_record_version": 1
+      },
+      "forbidden_targets": [
+        "a0-h023",
+        "a1-h023",
+        "a2-h023"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h023",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h023",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h023",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h023",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-0-h023",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-0-h023",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-1-h023",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-1-h023",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-2-h023",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-2-h023",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h023",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h023",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "RESOURCE_SENSITIVE",
+          "record_id": "resource-h023",
+          "record_version": 1,
+          "value": true
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h023",
+              "coverage-resource-h023"
+            ]
+          ]
+        },
+        {
+          "purpose": "positive_adverse_linkage",
+          "alternatives": [
+            [
+              "login-h023",
+              "device-h023",
+              "resource-h023"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-024",
+      "fixture": "case-024.json",
+      "family": "failures",
+      "world_truth": "INCONCLUSIVE",
+      "reference_urgency": "MEDIUM",
+      "allowed_dispositions": [
+        "INCONCLUSIVE"
+      ],
+      "allowed_urgencies": [
+        "MEDIUM"
+      ],
+      "required_evidence_rationale": "Failure burst has no observed successful session to revoke.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "a0-h024",
+        "a1-h024",
+        "a2-h024"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h024",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h024",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h024",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h024",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-0-h024",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-0-h024",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-1-h024",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-1-h024",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-2-h024",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-2-h024",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h024",
+              "coverage-resource-h024"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-025",
+      "fixture": "case-025.json",
+      "family": "resource",
+      "world_truth": "BENIGN",
+      "reference_urgency": "MEDIUM",
+      "allowed_dispositions": [
+        "BENIGN"
+      ],
+      "allowed_urgencies": [
+        "MEDIUM"
+      ],
+      "required_evidence_rationale": "Complete auth/resource window, satisfied MFA, managed target device and exact approved context; no visible contrary event. Reference MEDIUM is the plan's analyst follow-up stratum; accepted host urgency defaults are intentionally not rewritten to match it.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "s-h025"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h025",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h025",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h025",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h025",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h025",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h025",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "RESOURCE_SENSITIVE",
+          "record_id": "routine-0-h025",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "RESOURCE_SENSITIVE",
+          "record_id": "routine-1-h025",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "RESOURCE_SENSITIVE",
+          "record_id": "routine-2-h025",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h025",
+              "coverage-resource-h025"
+            ]
+          ]
+        },
+        {
+          "purpose": "benign_corroboration",
+          "alternatives": [
+            [
+              "login-h025",
+              "device-h025",
+              "network-h025"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-026",
+      "fixture": "case-026.json",
+      "family": "resource",
+      "world_truth": "ESCALATE",
+      "reference_urgency": "CRITICAL",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "CRITICAL"
+      ],
+      "required_evidence_rationale": "Observed unmanaged successful device and sensitive activity in the exact successful session.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "s-h026",
+        "target_record_id": "login-h026",
+        "target_record_version": 1
+      },
+      "forbidden_targets": [],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h026",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h026",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h026",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h026",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h026",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h026",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "RESOURCE_SENSITIVE",
+          "record_id": "resource-h026",
+          "record_version": 1,
+          "value": true
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h026",
+              "coverage-resource-h026"
+            ]
+          ]
+        },
+        {
+          "purpose": "positive_adverse_linkage",
+          "alternatives": [
+            [
+              "login-h026",
+              "device-h026",
+              "resource-h026"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-027",
+      "fixture": "case-027.json",
+      "family": "resource",
+      "world_truth": "ESCALATE",
+      "reference_urgency": "CRITICAL",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "CRITICAL"
+      ],
+      "required_evidence_rationale": "Observed distinct MFA denials before the exact successful IP/device.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "s-h027",
+        "target_record_id": "login-h027",
+        "target_record_version": 1
+      },
+      "forbidden_targets": [
+        "a0-h027",
+        "a1-h027"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h027",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h027",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h027",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h027",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-0-h027",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-0-h027",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-1-h027",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-1-h027",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h027",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h027",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h027",
+              "coverage-resource-h027"
+            ]
+          ]
+        },
+        {
+          "purpose": "positive_adverse_linkage",
+          "alternatives": [
+            [
+              "login-h027",
+              "attempt-0-h027",
+              "attempt-1-h027"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-028",
+      "fixture": "case-028.json",
+      "family": "resource",
+      "world_truth": "ESCALATE",
+      "reference_urgency": "HIGH",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "required_evidence_rationale": "Observed unmanaged successful device and sensitive activity in the exact successful session.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "s-h028",
+        "target_record_id": "login-h028",
+        "target_record_version": 1
+      },
+      "forbidden_targets": [
+        "earlier-s-h028"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h028",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h028",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h028",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h028",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "earlier-login-h028",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "earlier-login-h028",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "earlier-device-h028",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h028",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h028",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "RESOURCE_SENSITIVE",
+          "record_id": "resource-h028",
+          "record_version": 1,
+          "value": true
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h028",
+              "coverage-resource-h028"
+            ]
+          ]
+        },
+        {
+          "purpose": "positive_adverse_linkage",
+          "alternatives": [
+            [
+              "login-h028",
+              "device-h028",
+              "resource-h028"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-029",
+      "fixture": "case-029.json",
+      "family": "resource",
+      "world_truth": "ESCALATE",
+      "reference_urgency": "HIGH",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "required_evidence_rationale": "Observed unmanaged successful device and sensitive activity in the exact successful session.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "s-h029",
+        "target_record_id": "login-h029",
+        "target_record_version": 2
+      },
+      "forbidden_targets": [],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h029",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h029",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h029",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h029",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h029",
+          "record_version": 2,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h029",
+          "record_version": 2,
+          "value": false
+        },
+        {
+          "kind": "RESOURCE_SENSITIVE",
+          "record_id": "resource-h029",
+          "record_version": 1,
+          "value": true
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h029",
+              "coverage-resource-h029"
+            ]
+          ]
+        },
+        {
+          "purpose": "positive_adverse_linkage",
+          "alternatives": [
+            [
+              "login-h029",
+              "device-h029",
+              "resource-h029"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-030",
+      "fixture": "case-030.json",
+      "family": "resource",
+      "world_truth": "INCONCLUSIVE",
+      "reference_urgency": "HIGH",
+      "allowed_dispositions": [
+        "INCONCLUSIVE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "required_evidence_rationale": "Sensitive record belongs to another session; managed success and privilege do not establish target misuse.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "s-h030"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h030",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h030",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h030",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h030",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h030",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h030",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "RESOURCE_SENSITIVE",
+          "record_id": "other-resource-h030",
+          "record_version": 1,
+          "value": true
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h030",
+              "coverage-resource-h030"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-031",
+      "fixture": "case-031.json",
+      "family": "telemetry",
+      "world_truth": "BENIGN",
+      "reference_urgency": "LOW",
+      "allowed_dispositions": [
+        "BENIGN"
+      ],
+      "allowed_urgencies": [
+        "LOW"
+      ],
+      "required_evidence_rationale": "Complete auth/resource window, satisfied MFA, managed target device and exact approved context; no visible contrary event.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "s-h031"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h031",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h031",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h031",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h031",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h031",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h031",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h031",
+              "coverage-resource-h031"
+            ]
+          ]
+        },
+        {
+          "purpose": "benign_corroboration",
+          "alternatives": [
+            [
+              "login-h031",
+              "device-h031",
+              "network-h031"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-032",
+      "fixture": "case-032.json",
+      "family": "telemetry",
+      "world_truth": "ESCALATE",
+      "reference_urgency": "MEDIUM",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "MEDIUM"
+      ],
+      "required_evidence_rationale": "Observed distinct MFA denials before the exact successful IP/device. Missing telemetry does not erase these already observed positive findings; complete benign dismissal remains unavailable. Reference MEDIUM is the plan's analyst follow-up stratum; accepted host urgency defaults are intentionally not rewritten to match it.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "s-h032",
+        "target_record_id": "login-h032",
+        "target_record_version": 1
+      },
+      "forbidden_targets": [
+        "a0-h032",
+        "a1-h032"
+      ],
+      "required_gaps": [
+        "coverage-auth-h032"
+      ],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h032",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h032",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h032",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h032",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-0-h032",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-0-h032",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "attempt-1-h032",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "attempt-1-h032",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h032",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h032",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h032",
+              "coverage-resource-h032"
+            ]
+          ]
+        },
+        {
+          "purpose": "positive_adverse_linkage",
+          "alternatives": [
+            [
+              "login-h032",
+              "attempt-0-h032",
+              "attempt-1-h032"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": false,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-033",
+      "fixture": "case-033.json",
+      "family": "telemetry",
+      "world_truth": "ESCALATE",
+      "reference_urgency": "MEDIUM",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "MEDIUM"
+      ],
+      "required_evidence_rationale": "Observed unmanaged successful device and sensitive activity in the exact successful session. Missing telemetry does not erase these already observed positive findings; complete benign dismissal remains unavailable. Reference MEDIUM is the plan's analyst follow-up stratum; accepted host urgency defaults are intentionally not rewritten to match it.",
+      "expected_proposal": {
+        "action": "REVOKE_SESSION",
+        "target_session_id": "s-h033",
+        "target_record_id": "login-h033",
+        "target_record_version": 1
+      },
+      "forbidden_targets": [],
+      "required_gaps": [
+        "coverage-resource-h033"
+      ],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h033",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h033",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h033",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h033",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h033",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h033",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "RESOURCE_SENSITIVE",
+          "record_id": "resource-h033",
+          "record_version": 1,
+          "value": true
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h033",
+              "coverage-resource-h033"
+            ]
+          ]
+        },
+        {
+          "purpose": "positive_adverse_linkage",
+          "alternatives": [
+            [
+              "login-h033",
+              "device-h033",
+              "resource-h033"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": false
+      }
+    },
+    {
+      "case_id": "held-034",
+      "fixture": "case-034.json",
+      "family": "telemetry",
+      "world_truth": "INCONCLUSIVE",
+      "reference_urgency": "HIGH",
+      "allowed_dispositions": [
+        "INCONCLUSIVE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "required_evidence_rationale": "Auth collection gap blocks benign dismissal despite positive managed/approved context.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "s-h034"
+      ],
+      "required_gaps": [
+        "coverage-auth-h034"
+      ],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h034",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h034",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h034",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h034",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h034",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h034",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h034",
+              "coverage-resource-h034"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": false,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-035",
+      "fixture": "case-035.json",
+      "family": "telemetry",
+      "world_truth": "INCONCLUSIVE",
+      "reference_urgency": "HIGH",
+      "allowed_dispositions": [
+        "INCONCLUSIVE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "required_evidence_rationale": "A second successful device/IP remains unresolved; latest approved context cannot dismiss the entire window.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "earlier-s-h035",
+        "s-h035"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h035",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h035",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h035",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h035",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "earlier-login-h035",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "earlier-login-h035",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "earlier-device-h035",
+          "record_version": 1,
+          "value": false
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h035",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h035",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h035",
+              "coverage-resource-h035"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": true
+      }
+    },
+    {
+      "case_id": "held-036",
+      "fixture": "case-036.json",
+      "family": "telemetry",
+      "world_truth": "INCONCLUSIVE",
+      "reference_urgency": "MEDIUM",
+      "allowed_dispositions": [
+        "INCONCLUSIVE"
+      ],
+      "allowed_urgencies": [
+        "MEDIUM"
+      ],
+      "required_evidence_rationale": "Complete flag covers a narrower resource interval, omitting the first case minute.",
+      "expected_proposal": null,
+      "forbidden_targets": [
+        "s-h036"
+      ],
+      "required_gaps": [],
+      "acceptable_evidence_tuples": [
+        {
+          "kind": "DEVICE_MANAGED",
+          "record_id": "device-h036",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "NETWORK_APPROVED",
+          "record_id": "network-h036",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-auth-h036",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "COVERAGE_COMPLETE",
+          "record_id": "coverage-resource-h036",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "AUTH_SUCCESS",
+          "record_id": "login-h036",
+          "record_version": 1,
+          "value": true
+        },
+        {
+          "kind": "MFA_DENIED",
+          "record_id": "login-h036",
+          "record_version": 1,
+          "value": false
+        }
+      ],
+      "required_evidence_groups": [
+        {
+          "purpose": "coverage_context",
+          "alternatives": [
+            [
+              "coverage-auth-h036",
+              "coverage-resource-h036"
+            ]
+          ]
+        }
+      ],
+      "coverage_requirements": {
+        "auth": true,
+        "resource": false
+      }
+    }
+  ]
+}

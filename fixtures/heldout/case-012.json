@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "case_id": "held-012",
+  "snapshot_version": 1,
+  "window_start": "2026-09-21T09:00:00Z",
+  "cutoff": "2026-09-21T10:00:00Z",
+  "alert": {
+    "user_id": "u-h012",
+    "device_id": "d-h012",
+    "ip": "192.0.2.52",
+    "session_id": "s-h012",
+    "priority": "MEDIUM"
+  },
+  "records": [
+    {
+      "id": "identity-h012",
+      "kind": "identity",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h012",
+        "privileged": false
+      }
+    },
+    {
+      "id": "device-h012",
+      "kind": "device",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h012",
+        "device_id": "d-h012",
+        "managed": true
+      }
+    },
+    {
+      "id": "network-h012",
+      "kind": "network",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h012",
+        "ip": "192.0.2.52",
+        "approved": false,
+        "valid_from": "2026-09-01T00:00:00Z",
+        "valid_to": "2026-09-30T00:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-auth-h012",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h012",
+        "stream": "auth",
+        "complete": true,
+        "gap": "",
+        "from": "2026-09-21T09:00:00Z",
+        "to": "2026-09-21T10:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-resource-h012",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h012",
+        "stream": "resource",
+        "complete": true,
+        "gap": "",
+        "from": "2026-09-21T09:00:00Z",
+        "to": "2026-09-21T10:00:00Z"
+      }
+    },
+    {
+      "id": "travel-h012",
+      "kind": "travel",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h012",
+        "ip": "192.0.2.52",
+        "approved": true,
+        "valid_from": "2026-09-20T00:00:00Z",
+        "valid_to": "2026-09-21T09:59:59Z"
+      }
+    },
+    {
+      "id": "login-h012",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:50:00Z",
+      "ingested_at": "2026-09-21T09:50:00Z",
+      "data": {
+        "user_id": "u-h012",
+        "session_id": "s-h012",
+        "device_id": "d-h012",
+        "ip": "192.0.2.52",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    }
+  ]
+}

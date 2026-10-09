@@ -1,0 +1,42 @@
+name: offline-regression
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  offline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.11'
+      - name: Record supplied runtime
+        run: |
+          python --version
+          python -c "import sqlite3; print(sqlite3.sqlite_version)"
+      - name: Static freezes and independent rubric prerequisite
+        run: |
+          python -m evaluation.freeze
+          python -m evaluation.heldout_freeze --require-review
+      - name: Compile and exercise offline tests
+        run: |
+          python -m compileall -q security_triage evaluation tests
+          python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Demo and independent outcomes
+        run: |
+          python -m security_triage demo --out work/ci-demo
+          python -m evaluation.verify --run-dir work/ci-demo --suite demo
+      - name: Reviewed heldout regression
+        run: |
+          python -m evaluation.run --split heldout --providers scripted,baseline --repeat 3 --out work/ci-heldout
+          python -m evaluation.score --run-dir work/ci-heldout --assert-gates
+

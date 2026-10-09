@@ -1,4 +1,4 @@
-"""Development-only parent harness; actor subprocesses never receive labels."""
+"""Parent harness for unchanged development diagnostics or reviewed heldout repeats."""
 
 import argparse
 import hashlib
@@ -13,7 +13,12 @@ from .freeze import check_freeze
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def run(output, providers, repeat):
+def run(output, providers, repeat, split="development", review_receipt=None):
+    if split == "heldout":
+        from .heldout_run import run as run_heldout
+        return run_heldout(output, providers, repeat, review_receipt)
+    if split != "development":
+        raise ValueError("unknown_evaluation_split")
     if providers != ["scripted", "baseline"] or repeat != 1:
         raise ValueError("M2 authorizes development diagnostics for both providers once")
     freeze = check_freeze()
@@ -48,19 +53,20 @@ def run(output, providers, repeat):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="M2 development diagnostics; no heldout route.")
-    parser.add_argument("--split", choices=["development"], required=True)
+    parser = argparse.ArgumentParser(description="Development diagnostics or independently reviewed heldout repeats.")
+    parser.add_argument("--split", choices=["development", "heldout"], required=True)
     parser.add_argument("--providers", default="scripted,baseline")
     parser.add_argument("--repeat", type=int, default=1)
     parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--review-receipt", type=Path)
     args = parser.parse_args()
     try:
-        result = run(args.out, args.providers.split(","), args.repeat)
+        result = run(args.out, args.providers.split(","), args.repeat, args.split, args.review_receipt)
     except (ValueError, OSError, subprocess.SubprocessError, TimeoutError) as exc:
-        print("development run failed: " + str(exc))
+        print("evaluation run failed: " + str(exc))
         return 1
     print(json.dumps({"split": result["split"], "executions": len(result["executions"]),
-                      "diagnostic_only": True}, indent=2))
+                      "diagnostic_only": result["split"] == "development"}, indent=2))
     return 0
 
 

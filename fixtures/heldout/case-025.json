@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "case_id": "held-025",
+  "snapshot_version": 1,
+  "window_start": "2026-09-21T09:00:00Z",
+  "cutoff": "2026-09-21T10:00:00Z",
+  "alert": {
+    "user_id": "u-h025",
+    "device_id": "d-h025",
+    "ip": "192.0.2.65",
+    "session_id": "s-h025",
+    "priority": "MEDIUM"
+  },
+  "records": [
+    {
+      "id": "identity-h025",
+      "kind": "identity",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h025",
+        "privileged": true
+      }
+    },
+    {
+      "id": "device-h025",
+      "kind": "device",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h025",
+        "device_id": "d-h025",
+        "managed": true
+      }
+    },
+    {
+      "id": "network-h025",
+      "kind": "network",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h025",
+        "ip": "192.0.2.65",
+        "approved": true,
+        "valid_from": "2026-09-01T00:00:00Z",
+        "valid_to": "2026-09-30T00:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-auth-h025",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h025",
+        "stream": "auth",
+        "complete": true,
+        "gap": "",
+        "from": "2026-09-21T09:00:00Z",
+        "to": "2026-09-21T10:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-resource-h025",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h025",
+        "stream": "resource",
+        "complete": true,
+        "gap": "",
+        "from": "2026-09-21T09:00:00Z",
+        "to": "2026-09-21T10:00:00Z"
+      }
+    },
+    {
+      "id": "login-h025",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:50:00Z",
+      "ingested_at": "2026-09-21T09:50:00Z",
+      "data": {
+        "user_id": "u-h025",
+        "session_id": "s-h025",
+        "device_id": "d-h025",
+        "ip": "192.0.2.65",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "routine-0-h025",
+      "kind": "resource",
+      "version": 1,
+      "event_time": "2026-09-21T09:51:00Z",
+      "ingested_at": "2026-09-21T09:51:00Z",
+      "data": {
+        "user_id": "u-h025",
+        "session_id": "s-h025",
+        "sensitive": false
+      }
+    },
+    {
+      "id": "routine-1-h025",
+      "kind": "resource",
+      "version": 1,
+      "event_time": "2026-09-21T09:52:00Z",
+      "ingested_at": "2026-09-21T09:52:00Z",
+      "data": {
+        "user_id": "u-h025",
+        "session_id": "s-h025",
+        "sensitive": false
+      }
+    },
+    {
+      "id": "routine-2-h025",
+      "kind": "resource",
+      "version": 1,
+      "event_time": "2026-09-21T09:53:00Z",
+      "ingested_at": "2026-09-21T09:53:00Z",
+      "data": {
+        "user_id": "u-h025",
+        "session_id": "s-h025",
+        "sensitive": false
+      }
+    }
+  ]
+}

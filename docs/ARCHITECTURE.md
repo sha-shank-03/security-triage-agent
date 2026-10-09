@@ -47,5 +47,27 @@ A pending payload binds action, target/auth record version, user/identity versio
 
 Only the separate review API/CLI can transition PENDING to APPROVED_SIMULATION, REJECTED, STALE or EXPIRED. Wrong hash or version refuses without approval. Review intent is hashed under its request ID; identical retries return the original success or refusal and conflicting retries fail. A historical successful replay after later evidence registration does not perform fresh approval or execution. Stale/expired transitions occur when review is attempted. Audit and proposal/review updates commit atomically. There is no executor.
 
-The demo verifier and development scorer import no actor/policy module. They read original fixture fields, separate labels, source databases and host outcomes. Raw provider recommendations remain separate from guarded dispositions; rejected raw targets stay in attempts. The development freeze binds the baseline, schemas and twelve adjudications before scoring. It is a small diagnostic corpus; held-out benchmark/gates and hosted CI are deferred.
+The demo verifier and development scorer import no actor/policy module. They read original fixture fields, separate labels, source databases and host outcomes. Raw provider recommendations remain separate from guarded dispositions; rejected raw targets stay in attempts. The development freeze binds the baseline, schemas and twelve adjudications before scoring. M2's accepted freeze and source are preserved in Git history.
+
+M3 adds a separate heldout-v1 source/data/rubric fingerprint and independent
+review receipt prerequisite. The parent launches two scripts three times, one
+actor subprocess at a time, with a 180-second whole-batch deadline. Only split,
+provider, request ID and output path go to the actor. Unfinished cases/executions
+are recorded, and the completeness gate fails; an interrupted evaluation
+manifest is preserved rather than overwritten.
+
+The new independent verifier reconstructs scoped/time-visible query results,
+cursor chains and observation IDs from raw source fields. It checks reservation
+counts, corrections, original deadlines, actor/config/run identity, exact
+accepted-final binding, finite policy support, current snapshot registry and
+immutable proposal/version/expiry/pending state. It imports no acting-policy
+function. Labels score disagreement after invariants are checked, allowing
+baseline errors to remain visible.
+
+Repeated semantic digests include final outcome, claim/proposal linkage and full
+observable raw/tool trajectory, with wall time/request/run/hash-derived IDs
+normalized out. Machine timing is reported separately. Raw/guarded metrics use
+36 unique cases per provider, with 216 executions across repeats. The corpus,
+policy and labels share an author; these checks do not establish independent
+real-model/generalization performance. M3 passed independent local acceptance with 65 tests, 216 authored case executions and 5,723 main raw-state checks. Hosted CI remains unexecuted.
 

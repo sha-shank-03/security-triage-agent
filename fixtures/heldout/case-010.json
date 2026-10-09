@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "case_id": "held-010",
+  "snapshot_version": 1,
+  "window_start": "2026-09-21T09:00:00Z",
+  "cutoff": "2026-09-21T10:00:00Z",
+  "alert": {
+    "user_id": "u-h010",
+    "device_id": "d-h010",
+    "ip": "192.0.2.50",
+    "session_id": "s-h010",
+    "priority": "MEDIUM"
+  },
+  "records": [
+    {
+      "id": "identity-h010",
+      "kind": "identity",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h010",
+        "privileged": false
+      }
+    },
+    {
+      "id": "device-h010",
+      "kind": "device",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h010",
+        "device_id": "d-h010",
+        "managed": true
+      }
+    },
+    {
+      "id": "network-h010",
+      "kind": "network",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h010",
+        "ip": "192.0.2.50",
+        "approved": false,
+        "valid_from": "2026-09-01T00:00:00Z",
+        "valid_to": "2026-09-30T00:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-auth-h010",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h010",
+        "stream": "auth",
+        "complete": true,
+        "gap": "",
+        "from": "2026-09-21T09:00:00Z",
+        "to": "2026-09-21T10:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-resource-h010",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h010",
+        "stream": "resource",
+        "complete": true,
+        "gap": "",
+        "from": "2026-09-21T09:00:00Z",
+        "to": "2026-09-21T10:00:00Z"
+      }
+    },
+    {
+      "id": "travel-h010",
+      "kind": "travel",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h010",
+        "ip": "192.0.2.50",
+        "approved": true,
+        "valid_from": "2026-09-21T09:00:00Z",
+        "valid_to": "2026-09-21T10:00:00Z"
+      }
+    },
+    {
+      "id": "login-h010",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:50:00Z",
+      "ingested_at": "2026-09-21T09:50:00Z",
+      "data": {
+        "user_id": "u-h010",
+        "session_id": "s-h010",
+        "device_id": "d-h010",
+        "ip": "192.0.2.50",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    }
+  ]
+}

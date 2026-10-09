@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "case_id": "held-028",
+  "snapshot_version": 1,
+  "window_start": "2026-09-21T09:00:00Z",
+  "cutoff": "2026-09-21T10:00:00Z",
+  "alert": {
+    "user_id": "u-h028",
+    "device_id": "d-h028",
+    "ip": "192.0.2.68",
+    "session_id": "s-h028",
+    "priority": "HIGH"
+  },
+  "records": [
+    {
+      "id": "identity-h028",
+      "kind": "identity",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h028",
+        "privileged": false
+      }
+    },
+    {
+      "id": "device-h028",
+      "kind": "device",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h028",
+        "device_id": "d-h028",
+        "managed": false
+      }
+    },
+    {
+      "id": "network-h028",
+      "kind": "network",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h028",
+        "ip": "192.0.2.68",
+        "approved": false,
+        "valid_from": "2026-09-01T00:00:00Z",
+        "valid_to": "2026-09-30T00:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-auth-h028",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h028",
+        "stream": "auth",
+        "complete": true,
+        "gap": "",
+        "from": "2026-09-21T09:00:00Z",
+        "to": "2026-09-21T10:00:00Z"
+      }
+    },
+    {
+      "id": "coverage-resource-h028",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h028",
+        "stream": "resource",
+        "complete": true,
+        "gap": "",
+        "from": "2026-09-21T09:00:00Z",
+        "to": "2026-09-21T10:00:00Z"
+      }
+    },
+    {
+      "id": "earlier-login-h028",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:20:00Z",
+      "ingested_at": "2026-09-21T09:20:00Z",
+      "data": {
+        "user_id": "u-h028",
+        "session_id": "earlier-s-h028",
+        "device_id": "earlier-d-h028",
+        "ip": "203.0.113.28",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "earlier-device-h028",
+      "kind": "device",
+      "version": 1,
+      "event_time": "2026-09-21T08:00:00Z",
+      "ingested_at": "2026-09-21T08:00:00Z",
+      "data": {
+        "user_id": "u-h028",
+        "device_id": "earlier-d-h028",
+        "managed": false
+      }
+    },
+    {
+      "id": "login-h028",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-09-21T09:50:00Z",
+      "ingested_at": "2026-09-21T09:50:00Z",
+      "data": {
+        "user_id": "u-h028",
+        "session_id": "s-h028",
+        "device_id": "d-h028",
+        "ip": "192.0.2.68",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "resource-h028",
+      "kind": "resource",
+      "version": 1,
+      "event_time": "2026-09-21T09:52:00Z",
+      "ingested_at": "2026-09-21T09:52:00Z",
+      "data": {
+        "user_id": "u-h028",
+        "session_id": "s-h028",
+        "sensitive": true
+      }
+    }
+  ]
+}

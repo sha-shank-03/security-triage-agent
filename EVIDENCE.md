@@ -1,6 +1,6 @@
 # Evidence log
 
-Date: 2026-10-08. State: M1 independently accepted; M2 worker integration/development checks passed, independent acceptance pending. Revision: uncommitted source. Environment: Windows/AMD64, launcher-selected CPython 3.11.9 (64-bit), bundled SQLite 3.45.1. Only owned loopback HTTP doubles were contacted. No dependency downloads, actual model calls, external network, hosted CI, real accounts, deployment, or containment execution. Historical M1 and M2 source-checkpoint results below are preserved separately from the completed M2 integration results.
+Date: 2026-10-08. State: M1/M2 independently accepted; M3 source/pure-component checkpoint prepared, rubric review and integration pending. Accepted M2 source is preserved at local Git commit e04254caf4e7906fe32a1b1fb5700b60349a3e13; M3 changes are uncommitted. Environment: Windows/AMD64, launcher-selected CPython 3.11.9 (64-bit), bundled SQLite 3.45.1. Only M2 owned loopback HTTP doubles were contacted. No dependency downloads, actual model calls, external network, hosted CI, real accounts, deployment, or containment execution. Historical checkpoint results are preserved separately by milestone.
 
 Independent M1 acceptance was recorded at 2026-10-08T10:11:15.291368+00:00:
 four commands, nine units, six integration tests and twelve additional direct
@@ -257,3 +257,122 @@ Independent M2 acceptance is pending. M3 held-out case authorship, adjudication,
 scoring/gates and hosted CI remain unexecuted. Real Ollama/model compatibility,
 model quality/safety/usage, production integrations, productivity, publication
 and containment remain unexecuted. No probability calibration is claimed.
+
+## Independent M2 acceptance
+
+Main accepted M2 at 2026-10-08T11:20:04.799947+00:00 after six independent
+commands and 48 tests, 210 direct artifact checks, 121 recomputed source claims
+and 54 verified source files. It confirmed the 12/12 adaptive versus 9/12
+baseline development dispositions, retained baseline HIGH miss, actual crash
+recovery and HTTP bounds, and wrong-digest/exact/reopen/conflicting review with
+unchanged evidence. The M2 lease was released. This acceptance does not include
+M3 or real-model performance.
+
+## M3 source and pure-component checkpoint
+
+Authored thirty-six new fictional September snapshots and schema-v2
+adjudications, a reviewed-rubric prerequisite, independent query/final/proposal
+replay verifier, raw/guarded denominator metrics, both-provider three-repeat
+180-second parent harness, normalized outcome/trace comparison and predeclared
+gates. Added deferred actual SQLite mutation and label-access/sentinel tests,
+contribution/security guidance, data attribution and pinned free-public-runner
+CI. No actor policy, baseline or provider decision behavior was modified.
+
+Accepted M2 source was saved in a local Git root commit using the already
+configured author identity. There was no remote/push/publication. Development
+freeze c24d2589a14b43a6ca9ae06ed7a6d5e9af955f808418c1c362cfd1e8f809d1c9 and
+all prior results remain intact. LF attributes were added for portable byte
+fingerprints. This source history is an actual commit, not an invented revision.
+
+Heldout-v1 freeze:
+95c943961e711d67226d1ecd49f90c33e05b94338d1c80c37f30dee9603d1859.
+It binds all 36 inputs, labels/schema/rubric, baseline, actor/catalog/policy/prompt
+source and independent evaluator. It was written before any heldout
+investigation, scoring or provider batch. The separate unsigned review receipt
+is PENDING. Both execution and scoring refuse it before actor launch or outcome
+data access. Tests use only synthetic in-memory review receipts and never write
+approval.
+
+| Exact command | Exit | Observed source/component result |
+| --- | ---: | --- |
+| py -3.11 -m unittest tests.test_m3_components -v | 0 | Initial 14 pure methods passed, unittest 0.640 s; tool wall 1.1488615 s. Hand-built ledger mutation checks and static 36-input validation; no actor run. |
+| py -3.11 -m unittest tests.test_m3_components -v | 0 | Expanded filtered-benign and hypothesis/review-shape checks: 14 passed, unittest 0.066 s; tool wall 0.6235806 s. |
+| py -3.11 -m compileall -q security_triage evaluation tests | 0 | Syntax check, tool wall 0.4638452 s. |
+| py -3.11 -m evaluation.heldout_freeze --write | 0 | Static 36-case/schema/strata/source freeze, zero outcomes scored; tool wall 0.4364833 s. |
+| py -3.11 -m unittest tests.test_m2_components tests.test_m3_components -v | 0 | Final 40 pure methods passed (25 M2 + 15 M3), unittest 0.129 s; tool wall 0.666405 s. |
+| py -3.11 -m evaluation.freeze | 0 | Accepted M2 development freeze unchanged; tool wall 0.1174005 s. |
+| py -3.11 -m evaluation.heldout_freeze | 0 | Heldout-v1 fingerprint unchanged; tool wall 0.4334386 s. |
+| py -3.11 -m compileall -q security_triage evaluation tests | 0 | Final syntax check, tool wall 0.4967209 s. |
+| py -3.11 -m evaluation.heldout_freeze --require-review | 1, expected | Negative prerequisite check refused pending approval with independent_rubric_review_required_before_heldout_run_or_score; tool wall 0.3751204 s. No actor/outcome access. |
+| git diff --check | 0 | Whitespace check passed; tool wall 0.2545767 s. |
+
+No M3 test command failed. The expected nonzero static prerequisite result is
+retained. No assertions, labels, thresholds or baseline behavior were weakened.
+The fifteen new pure methods verify coherent benign/escalation ledgers; nine
+mutations (verdict, reference, record version, rehashed target, rehashed snapshot
+version, forged review state, source index, observation and turn count); extra
+review/executor refusal; changed valid traces versus normalized timestamps;
+filtered/forged benign evidence refusal; 36 valid inputs and label fact tuples;
+pending/changed/incomplete receipts; parent/scorer refusal before subprocess or
+data access; no actor evaluator imports/label arguments; unchanged M2 freeze;
+and artificial metric vectors showing that all-inconclusive refusal cannot pass
+outcome gates. Synthetic metric vectors are unit inputs, not heldout scores.
+
+### Review questions and exact unexecuted commands
+
+docs/HELDOUT_REVIEW.md requests independent review of every row before first
+scoring. Eight MEDIUM benign/escalation references retain the plan's strata while
+accepted M2 defaults remain LOW for benign and HIGH/CRITICAL for escalation.
+Those upward/downward differences will be reported; no global exact-urgency
+threshold is invented. Observed positive misuse amid gaps and unrelated
+IP/session/earlier-success/narrow coverage cases have explicit review questions.
+The worker has not approved its own labels or inferred passing outcomes.
+
+After independent rubric approval and a newly granted M3 integration window:
+
+    py -3.11 -m evaluation.freeze
+    py -3.11 -m evaluation.heldout_freeze --require-review
+    py -3.11 -m compileall -q security_triage evaluation tests
+    py -3.11 -m unittest discover -s tests -p test_*.py -v
+    py -3.11 -m evaluation.run --split heldout --providers scripted,baseline --repeat 3 --out work/m3-heldout
+    py -3.11 -m evaluation.score --run-dir work/m3-heldout --assert-gates
+    py -3.11 -m security_triage demo --out work/m3-demo
+    py -3.11 -m evaluation.verify --run-dir work/m3-demo --suite demo
+
+The full suite now has 65 authored methods, including two new disk/label-access
+integration methods. Sixty-five is a static method count, not an M3 integration
+result. Both providers times three repeats would create 216 executions across
+36 unique cases (12 BENIGN / 16 ESCALATE / 8 INCONCLUSIVE; misuse strata 4 MEDIUM /
+8 HIGH / 4 CRITICAL). Those batches, all actual M3 investigations/HTTP/recovery,
+scoring/gates, hosted CI and independent final acceptance remain unexecuted.
+No M3 lease was consumed, downloads/model/containment calls are zero, and no
+peak resource measurement is claimed for pure checks.
+
+Proposed new M3 envelope: ten cumulative active minutes, one sequential CPU
+worker with at most one owned child and one loopback double at a time, 256 MiB
+RAM, 50 MiB generated disk, zero downloads/external/live-model/containment calls.
+All earlier review remains SIMULATED. Main must review ambiguity, approve the
+exact frozen rubric and grant the new lease before any integrated command.
+This same-author deterministic corpus does not establish independent SOC/model
+quality, statistically proven uplift, calibrated probabilities or time saved.
+
+
+## Independent final local acceptance — 8 October 2026
+
+Main accepted all36 raw authored rubrics before scoring and independently accepted the final local MVP afterward. A fresh107-file source/data copy needed no installation. All eight documented commands exited0: development freeze, heldout freeze/review prerequisite, compileall,65-test full suite,216paired heldout executions, independent scorer/gates, standalone three-case demo and verifier. Main wall times were0.156,0.219,0.265,6.125,39.969,0.547,1.078 and0.141seconds. All107shipping files remained unchanged during execution.
+
+A separate main stdlib audit imported neither actor nor evaluator. It passed5723conditions across12read-only SQLite databases and216committed outcomes; recomputed1098guarded and1173raw typed claims from original observed record fields; verified source identity/session records unchanged, report/database equality, bounded counters, pending exact-content proposals and72three-repeat outcome/trace groups. Independent counter checking includes the original rejected attempt plus at most two correction retries, verifies every rejected attempt against persisted accounting, and forbids further calls after exhaustion.
+
+Every repeat reproduced adaptive34/36guarded versus32/36raw and baseline28/36guarded versus27/36raw. Adaptive held-032 andheld-033 remain missed MEDIUM escalations with telemetry gaps. Adaptive raw held-035/036 incorrectly recommend BENIGN; finite host guards reject those and retain INCONCLUSIVE. Both guarded policies have zero false dismissals. Adaptive escalates all12HIGH/CRITICAL examples, correctly keeps12/12benign and8/8inconclusive, and emits14/16required proposals; all14emitted targets are valid. Its guarded urgency matches30/36; raw urgency matches28/36. Baseline guarded misses one HIGH escalation and retains other errors. These figures meet the predeclared adaptive gates; there is no baseline uplift or perfect-accuracy gate.
+
+The full suite includes owned crash recovery, real loopback doubles, approval version/hash/expiry/snapshot checks, source immutability, failure/corruption controls and synthetic completion fallbacks. Main does not infer live model quality, SOC accuracy, production authentication, containment execution or power-loss safety from these tests. Proposals and reviews remain SIMULATED/NOT_IMPLEMENTED.
+
+Original worker instrumentation failures remain preserved: its first suite printed65passes but native exit/resources were unknown after a temporary-directory sampler race; the subsequent recovery startup stopped before launch on a Windows separator alias mismatch. Main verified all13original artifacts; the corrected ignored sampler then produced successful native exits. These ignored-helper repairs changed no shipped source, actor, labels or gates. The main audit initially treated corrections_used as retries alone; inspection showed that it includes the original rejected attempt, so main corrected its helper and added exact persisted-attempt accounting. The original failed helper receipt remains, with no application rerun or source change.
+
+Final local acceptance passed. Only status/evidence documentation changed afterward; both freezes/review prerequisite and Git whitespace checks passed. Main peak RAM was not sampled; worker73.54MiBsampled working set is separate evidence. Hosted CI, Linux execution, real models, production accounts, containment, deployment and publication remain unexecuted. Thirty-six authored examples repeated six ways are216executions, not216independent examples.
+
+## Public source release — 9 October 2026
+
+All three local MVP milestones passed independent acceptance on 8 October 2026, including final documentation review. The review was executed separately from the implementation worker and included documented quickstarts, meaningful success/failure tests and direct domain-state checks. The results and limitations above remain unchanged.
+
+This source release includes application code, authored fixtures, evaluator/tests, quickstart, architecture, license/attribution and the prepared CI workflow. Private orchestration records, machine-specific paths, runtime caches and generated local runs are excluded. Offline scripted/rule/replay outcomes and local provider doubles do not establish live model quality, employer adoption or production impact. Hosted CI results are available in this repository's Actions tab after publication; historical local reports retain their original execution dates.
