@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "case_id": "u2b-cap-01-2",
+  "snapshot_version": 1,
+  "window_start": "2026-10-13T09:00:00Z",
+  "cutoff": "2026-10-13T10:30:00Z",
+  "alert": {
+    "user_id": "u2b-cap-01-2-user",
+    "device_id": "u2b-cap-01-2-alert-device",
+    "ip": "203.0.113.21",
+    "session_id": "u2b-cap-01-2-session",
+    "priority": "LOW"
+  },
+  "records": [
+    {
+      "id": "u2b-cap-01-2-identity",
+      "kind": "identity",
+      "version": 1,
+      "event_time": "2026-10-13T08:00:00Z",
+      "ingested_at": "2026-10-13T08:00:00Z",
+      "data": {
+        "user_id": "u2b-cap-01-2-user",
+        "privileged": false
+      }
+    },
+    {
+      "id": "u2b-cap-01-2-device",
+      "kind": "device",
+      "version": 1,
+      "event_time": "2026-10-13T08:00:00Z",
+      "ingested_at": "2026-10-13T08:00:00Z",
+      "data": {
+        "user_id": "u2b-cap-01-2-user",
+        "device_id": "u2b-cap-01-2-device",
+        "managed": true
+      }
+    },
+    {
+      "id": "u2b-cap-01-2-network",
+      "kind": "network",
+      "version": 1,
+      "event_time": "2026-10-13T08:00:00Z",
+      "ingested_at": "2026-10-13T08:00:00Z",
+      "data": {
+        "user_id": "u2b-cap-01-2-user",
+        "ip": "203.0.113.21",
+        "approved": false,
+        "valid_from": "2026-10-01T00:00:00Z",
+        "valid_to": "2026-10-31T00:00:00Z"
+      }
+    },
+    {
+      "id": "u2b-cap-01-2-travel",
+      "kind": "travel",
+      "version": 1,
+      "event_time": "2026-10-13T08:00:00Z",
+      "ingested_at": "2026-10-13T08:00:00Z",
+      "data": {
+        "user_id": "u2b-cap-01-2-user",
+        "ip": "203.0.113.21",
+        "approved": true,
+        "valid_from": "2026-10-01T00:00:00Z",
+        "valid_to": "2026-10-31T00:00:00Z"
+      }
+    },
+    {
+      "id": "u2b-cap-01-2-coverage-auth",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-10-13T08:00:00Z",
+      "ingested_at": "2026-10-13T08:00:00Z",
+      "data": {
+        "user_id": "u2b-cap-01-2-user",
+        "stream": "auth",
+        "complete": true,
+        "gap": "",
+        "from": "2026-10-13T09:00:00Z",
+        "to": "2026-10-13T10:30:00Z"
+      }
+    },
+    {
+      "id": "u2b-cap-01-2-coverage-resource",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-10-13T08:00:00Z",
+      "ingested_at": "2026-10-13T08:00:00Z",
+      "data": {
+        "user_id": "u2b-cap-01-2-user",
+        "stream": "resource",
+        "complete": true,
+        "gap": "",
+        "from": "2026-10-13T09:00:00Z",
+        "to": "2026-10-13T10:30:00Z"
+      }
+    },
+    {
+      "id": "u2b-cap-01-2-success",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-10-13T09:51:00Z",
+      "ingested_at": "2026-10-13T09:51:00Z",
+      "data": {
+        "user_id": "u2b-cap-01-2-user",
+        "session_id": "u2b-cap-01-2-session",
+        "device_id": "u2b-cap-01-2-device",
+        "ip": "203.0.113.21",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "u2b-cap-01-2-ordinary-0",
+      "kind": "resource",
+      "version": 1,
+      "event_time": "2026-10-13T09:55:00Z",
+      "ingested_at": "2026-10-13T09:55:00Z",
+      "data": {
+        "user_id": "u2b-cap-01-2-user",
+        "session_id": "u2b-cap-01-2-session",
+        "sensitive": false
+      }
+    },
+    {
+      "id": "u2b-cap-01-2-ordinary-1",
+      "kind": "resource",
+      "version": 1,
+      "event_time": "2026-10-13T09:56:00Z",
+      "ingested_at": "2026-10-13T09:56:00Z",
+      "data": {
+        "user_id": "u2b-cap-01-2-user",
+        "session_id": "u2b-cap-01-2-session",
+        "sensitive": false
+      }
+    }
+  ]
+}

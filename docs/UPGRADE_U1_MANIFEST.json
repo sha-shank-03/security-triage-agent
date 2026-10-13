@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "version": "industry-u1-source-v1",
+  "date": "2026-10-11",
+  "base_public_commit": "ce934d877bf999141e8aa09c6d904e74048b356d",
+  "branch": "codex/industry-upgrade",
+  "status": "source_ready_integration_pending",
+  "actor_code_sha256": "5349303640fdc0741593ccbd29fbf1d9ac458e6936f3fdb4adf4cbc24ea964dd",
+  "files": {
+    "README.md": "48be23fcddee13abf494389bdd82ac0edaf9773a4205312250a1c8854fff805e",
+    "docs/UPGRADE_U1.md": "380065bf5e8f98beac7a2fa176b0ade3597ba397f8e01664b779eb3f7b130365",
+    "evaluation/upgrade_verify.py": "92b1ce8c574b61dc98afdf9a035b52111cf6cb3f6aeedc53e1e94c88de597060",
+    "security_triage/gateway.py": "1ec8f482656c1c7dbbd0c9793b50e90dcc431c0aaac3bcf1ee6827017da290a8",
+    "security_triage/transport_worker.py": "f319503375d226be06eff692a4609de4112742b8f6557c5fe24514232ad06a1c",
+    "security_triage/upgrade.py": "71bb91df951b55f05b756b966141ac39844e7478b35127ca394316cf76e486b8",
+    "security_triage/upgrade_double.py": "00cf6d7825ff7eadef34336c7cd62b33a18e47ea340374f00743cd6c0a08d0f6",
+    "security_triage/upgrade_events.py": "a4df392d986003cc35a1497deb02fdd5042d3bdbb073162963803f6f12017615",
+    "security_triage/upgrade_runtime.py": "35ba3c65116df9c7b4a4e4453f92b53ac0ad021d62bb9c1eb4adf4a1d1a3effa",
+    "security_triage/upgrade_state.py": "8aa3bb8a53532d8dd4f70eeefea99725ca7fb2f9d4be8b1fe033b93d245e62ec",
+    "security_triage/upgrade_transport.py": "c6a487c178eb44e8970b5a43113cfe1b14da25392f9cdbd0b87fa943543f7128",
+    "tests/test_upgrade_deadline.py": "8addfe6fe34baf58011860f518e746d015901bc3974a604941ea2a40c4cc5362",
+    "tests/test_upgrade_events.py": "0c8952e55d260f023977fba6d371647cf184745b0abd3ff0156ad27ac97ed48d",
+    "tests/test_upgrade_gateway.py": "e57201de45e50b338343201fc287e12a076cdc98baa00088594cc7e29ca47d7a",
+    "tests/test_upgrade_spend.py": "b5facd918552ab17ebea47a61a495e8feb5422fe670263483b1937fc5af4ada2",
+    "tests/test_upgrade_transport.py": "d8fec4f188a8c960ad68eaa42dab45e703f018a816a7f70e8c1383ac28e6ad95"
+  },
+  "manifest_self_excluded": true,
+  "original_freezes": {
+    "evaluation/development_freeze.json": {
+      "manifest_digest": "c24d2589a14b43a6ca9ae06ed7a6d5e9af955f808418c1c362cfd1e8f809d1c9",
+      "source_files_verified": 17,
+      "artifact_sha256": "4dfd40f80678f42b923b806e8d02f52bf79ddec3d1e120b5cf1532535e06e27a"
+    },
+    "evaluation/heldout-v1-freeze.json": {
+      "manifest_digest": "95c943961e711d67226d1ecd49f90c33e05b94338d1c80c37f30dee9603d1859",
+      "source_files_verified": 62,
+      "artifact_sha256": "66fefe612545ebf354ca6c1b5e1fba776be5677ce9d7d768c0add45f59ce8528"
+    }
+  },
+  "historical_results": {
+    "adaptive_raw": "32/36",
+    "adaptive_guarded": "34/36",
+    "retained_medium_misses": [
+      "held-032",
+      "held-033"
+    ],
+    "retained_raw_false_benign": [
+      "held-035",
+      "held-036"
+    ]
+  },
+  "dependencies_added": [],
+  "new_benchmark_cases": 0,
+  "scope": "U1 only; no GitHub or containment; no actual Gateway or sandbox evidence."
+}

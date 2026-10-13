@@ -124,3 +124,55 @@ Small synthetic samples and scripted decisions do not establish SOC accuracy, an
 
 Code and authored fixtures are [MIT licensed](LICENSE). No external logs, detector rules, or model weights are redistributed.
 
+## Additive upgrade work
+
+The [U1 walkthrough](docs/UPGRADE_U1.md) describes the optional native Gateway
+loop, durable reservations, raw/guarded outcomes and independent state checks.
+Main independently accepted U1 locally on 12 October 2026: 88 tests, 13 commands,
+137 SQLite/fixture assertions and four negative controls. The Gateway route
+has zero automatic transport retries and no containment or case-writing tool.
+
+Main then accepted the [U2-A read-only local contract](docs/UPGRADE_U2A.md):
+21 pure methods, four native methods, a new synthetic two-page read, 14 direct
+assertions and four tamper controls. Genuine GitHub/token access remains unproven.
+
+The [U2-B source slice](docs/UPGRADE_U2B.md) adds 12 development and 12 capability
+fictional worker-exposed tasks, complete-playbook-v2 and independent raw/guarded
+scoring. Eleven pure checks passed; all split runs, demos, full-suite and CI commands
+remain unexecuted in this slice and await main review/lease. Labels are separate
+from actor inputs; no main-held unseen set was created or read. These local
+contracts establish no real-model quality, billing, external sandbox success,
+SOC accuracy or deployment result. Original v1 34/36 guarded versus 32/36 raw,
+labels, MEDIUM misses, raw BENIGN errors, actor source and freezes are retained.
+Comment write/reconciliation remains design-only; containment is NOT_IMPLEMENTED.
+
+
+## Offline reviewer package - U2-C, 12 October 2026
+
+Main verified the first U2-B offline batch: complete-playbook-v2 had12/12
+successful tasks on each authored split; the limited Gateway double had7/12
+on capability. All36 split executions reached COMPLETED, including five wrong
+double outcomes. These are correlated, worker-exposed fictional diagnostics.
+The first reports, all five misses and original36-case failures remain intact.
+
+See the [case study and walkthrough](docs/UPGRADE_U2C.md),
+[redacted first summary](docs/evidence/U2B_FIRST_SUMMARY.json), and
+[artifact pins](docs/evidence/U2B_FIRST_REPORT_PINS.json). Raw/guarded
+class, urgency, gaps, full task success, intended/dispatched/completed counts,
+separately labeled disposition/full-task pairing and latency coverage are
+reported. Unmeasured actual total cost and cost per success remain null.
+The new packaging manifest is [UPGRADE_U2C_MANIFEST.json](docs/UPGRADE_U2C_MANIFEST.json);
+historical actor/evaluation bindings are unchanged.
+
+```powershell
+py -3.11 -m evaluation.upgrade_public --validate docs/evidence/U2B_FIRST_SUMMARY.json
+py -3.11 -m evaluation.upgrade_ci
+```
+
+The local pure CI command passed61 methods (10 new) with socket/process launch
+blocked and zero failures/errors/skips. The added offline workflow gates
+integrity and failure contracts; quality scores remain descriptive. Hosted CI,
+full current/native/legacy regression, genuine GitHub/model evidence and final
+publication remain pending. The [14-command later batch](docs/UPGRADE_U2C_BATCH.json)
+is authored and unexecuted in U2-C. No actor, evaluator, dataset, labels,
+old manifest or first-run outcomes were changed by this packaging slice.

@@ -1,0 +1,127 @@
+{
+  "version": "u2c-regression-batch-v1",
+  "execution": "UNEXECUTED proposal; main authorization/current native lease required",
+  "output_policy": "Fresh directories only; no overwrite/resume; stop and retain outputs on unexpected exit",
+  "source_manifest": "docs/UPGRADE_U2C_MANIFEST.json",
+  "historical_evaluation": "evaluation/upgrade_eval_manifest_v3.json",
+  "u2b_split_reruns": 0,
+  "paid_calls": 0,
+  "external_calls": 0,
+  "external_writes": 0,
+  "command_count": 14,
+  "commands": [
+    {
+      "step": 1,
+      "id": "static-original-development",
+      "command": "py -3.11 -m evaluation.freeze",
+      "expected_exit": 0,
+      "status": "proposed_unexecuted_by_worker"
+    },
+    {
+      "step": 2,
+      "id": "static-original-heldout",
+      "command": "py -3.11 -m evaluation.heldout_freeze --require-review",
+      "expected_exit": 0,
+      "status": "proposed_unexecuted_by_worker"
+    },
+    {
+      "step": 3,
+      "id": "static-u2b",
+      "command": "py -3.11 -m evaluation.upgrade_dataset --verify",
+      "expected_exit": 0,
+      "status": "proposed_unexecuted_by_worker"
+    },
+    {
+      "step": 4,
+      "id": "public-first-snapshot",
+      "command": "py -3.11 -m evaluation.upgrade_public --validate docs/evidence/U2B_FIRST_SUMMARY.json",
+      "expected_exit": 0,
+      "status": "proposed_unexecuted_by_worker"
+    },
+    {
+      "step": 5,
+      "id": "packaged-pure-contracts",
+      "command": "py -3.11 -m evaluation.upgrade_ci",
+      "expected_exit": 0,
+      "status": "proposed_unexecuted_by_worker"
+    },
+    {
+      "step": 6,
+      "id": "current-full-legacy-and-upgrade-tests",
+      "command": "py -3.11 -m unittest discover -s tests -p 'test_*.py' -v",
+      "expected_exit": 0,
+      "status": "proposed_unexecuted_by_worker"
+    },
+    {
+      "step": 7,
+      "id": "current-known-baseline-demo",
+      "command": "py -3.11 -m evaluation.upgrade_run --split development --providers complete-playbook-v2 --demo-case u2b-dev-03-1 --max-seconds 60 --out work/reviewer-u2c-demo",
+      "expected_exit": 0,
+      "status": "proposed_unexecuted_by_worker"
+    },
+    {
+      "step": 8,
+      "id": "verify-current-known-demo",
+      "command": "py -3.11 -m evaluation.upgrade_verify --run-dir work/reviewer-u2c-demo/u2b-dev-03-1--complete-playbook-v2 --suite provider-contract --source fixtures/upgrade/development/u2b-dev-03-1.json",
+      "expected_exit": 0,
+      "status": "proposed_unexecuted_by_worker"
+    },
+    {
+      "step": 9,
+      "id": "u1-expected-false-completion",
+      "command": "py -3.11 -m security_triage.upgrade demo --provider gateway-double --scenario false-completion --out work/reviewer-u2c-false-completion",
+      "expected_exit": 2,
+      "status": "proposed_unexecuted_by_worker"
+    },
+    {
+      "step": 10,
+      "id": "verify-u1-honest-handoff",
+      "command": "py -3.11 -m evaluation.upgrade_verify --run-dir work/reviewer-u2c-false-completion --suite provider-contract --source fixtures/demo/case-002.json",
+      "expected_exit": 0,
+      "status": "proposed_unexecuted_by_worker"
+    },
+    {
+      "step": 11,
+      "id": "original-demo",
+      "command": "py -3.11 -m security_triage demo --out work/reviewer-u2c-legacy-demo",
+      "expected_exit": 0,
+      "status": "proposed_unexecuted_by_worker"
+    },
+    {
+      "step": 12,
+      "id": "verify-original-demo",
+      "command": "py -3.11 -m evaluation.verify --run-dir work/reviewer-u2c-legacy-demo --suite demo",
+      "expected_exit": 0,
+      "status": "proposed_unexecuted_by_worker"
+    },
+    {
+      "step": 13,
+      "id": "original36-case-regression",
+      "command": "py -3.11 -m evaluation.run --split heldout --providers scripted,baseline --repeat 1 --out work/reviewer-u2c-heldout",
+      "expected_exit": 0,
+      "status": "proposed_unexecuted_by_worker"
+    },
+    {
+      "step": 14,
+      "id": "score-original-regression",
+      "command": "py -3.11 -m evaluation.score --run-dir work/reviewer-u2c-heldout --assert-gates",
+      "expected_exit": 0,
+      "status": "proposed_unexecuted_by_worker"
+    }
+  ],
+  "contracts": {
+    "U1": "Native denials/rate limit/server failure one dispatch; malformed packets; slow headers/body/cancel; ambiguous loss/oversize no replay; raw fake completion retained as HANDOFF.",
+    "U2A": "Native GET-only scope/identity/version/pagination, drift/errors/deadline/cancel/connection loss; no actual GitHub.",
+    "legacy": "Original public36 unique cases x2 policies x1=72 repeated regression executions; preserve original receipts/failures; no new independent tasks."
+  },
+  "proposed_resources": {
+    "active_minutes_max": 15,
+    "ram_mib_max": 256,
+    "generated_disk_mib_max": 150,
+    "cpu_workers": 1,
+    "owned_transport_children_max": 1,
+    "owned_loopback_servers_max": 1,
+    "downloads_bytes": 0
+  },
+  "limits": "Proposed resource bounds, not observed peaks; full suite includes local native tests. No U2B corpus retuning or current re-stamping of first runs."
+}

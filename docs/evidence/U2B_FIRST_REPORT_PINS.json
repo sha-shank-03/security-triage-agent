@@ -1,0 +1,69 @@
+{
+  "version": "u2c-public-first-reports-v1",
+  "dataset_version": "worker-exposed-u2b-v1",
+  "source_manifest_sha256": "0023d8041a8b66230986a7eb41ca8950df812713c7e0c76f30525277e4ca55ed",
+  "eval_manifest_sha256": "45030132f82bca0377035e4f0b1704f5941691f847a139dd32d8d248c1ba68f1",
+  "actor_code_sha256": "378e16b39cee9fbe17d2d8c87a022d4457b33b9ca7b181788a37f4d8ae9ba53d",
+  "splits": {
+    "development": {
+      "providers": [
+        "complete-playbook-v2"
+      ],
+      "run_manifest_sha256": "133a72905aa30867f94a0aaefa8912dc2ce90b870f6c7f15f5754644c1984ab7",
+      "scores_sha256": "984160c54b32a740f6f8976d54ffae97e72efaa6ebc4de25c787cf732ea79a2b",
+      "input_manifest_sha256": "8cdcd22f38af495b031e75b4e3dd36edc68d34b0bf8a438438ff7b5c74604b44",
+      "packet_sha256": {
+        "u2b-dev-01-1--complete-playbook-v2": "f220abe498084ce6998bf0f87b46c67970e5e019a5f2e98080bc1b3a5cff55d6",
+        "u2b-dev-01-2--complete-playbook-v2": "194a481479ec85e85afabec493beb693c36f2a14609128aed624ad603b8bc264",
+        "u2b-dev-02-1--complete-playbook-v2": "6bfb2b5f622861b57990fa90e1b765c4f240255b262b28b28cc9eb7dad492aa6",
+        "u2b-dev-02-2--complete-playbook-v2": "def49a936650bef871c8c8fc1f38e98ccacab28763b8f32209b054ca40584b2b",
+        "u2b-dev-03-1--complete-playbook-v2": "4332e8951ae10edf1414d58daa9f43f9c9470fe34d47cf81edeb2ea6b02e9b23",
+        "u2b-dev-03-2--complete-playbook-v2": "2d418e0203da0c033b430024c7767fbe5d87c3a2fc6df9178db60e37c6086af1",
+        "u2b-dev-04-1--complete-playbook-v2": "c9d4a07dd384c0ce5ed89e4b83a529b1ece0e213d594b6c4b1479c9626fba3b6",
+        "u2b-dev-04-2--complete-playbook-v2": "34abcbc0637eebc107d9d0c960b5e4e4bf34963d1a0c0bf01d82f1677c3458ea",
+        "u2b-dev-05-1--complete-playbook-v2": "1834d61182d02bdb57aa6517788a72da916e6fb72ac059e2cea1c136921b6176",
+        "u2b-dev-05-2--complete-playbook-v2": "4a845e615eae5a5957e9bdc892e85d99eef2921b9e9c24581737fa969ca2adc5",
+        "u2b-dev-06-1--complete-playbook-v2": "0beb806976731e3a44a10b148e9c2df6bdfb1e5a4f638b20ed0ef8dae5aa3754",
+        "u2b-dev-06-2--complete-playbook-v2": "3d1bc1c37ab0b0f3f652fb6ceadb1f44a6658e136cfea303863e1f32461c43cc"
+      },
+      "redacted_cases_sha256": "09af257e0fa00c80a1329035156f152a290f4247c076595f2170a0476bbbba5d"
+    },
+    "capability": {
+      "providers": [
+        "complete-playbook-v2",
+        "gateway-double"
+      ],
+      "run_manifest_sha256": "ca69e557aec929941bc7d6b48c761424ea570c69f08cf13deb65f22bfb27f704",
+      "scores_sha256": "ca0d91675b095d3e14ee7ef04b0133ea79a8f95faed0c6cfe22b97d3e37ff6ed",
+      "input_manifest_sha256": "4bf678c601b82a5ff9c3145cee292b5e65cc5ac0c5aced260594c1a67e040eaf",
+      "packet_sha256": {
+        "u2b-cap-01-1--complete-playbook-v2": "6af4690efc4d4cf2beee7187b4974f5905f871c08a9874335c5ea121a081c086",
+        "u2b-cap-01-1--gateway-double": "b85d8664df3fecc654ca4da9ac0cde8c6f73dbb71ee7dbb53663b96bd1fc959a",
+        "u2b-cap-01-2--complete-playbook-v2": "57bec666f44b9451924815f06e1600a5987c2030295c483c3b4b72c2ff075846",
+        "u2b-cap-01-2--gateway-double": "1c94d7de9285468aa06e03f98d371434fa006f71c305ef209ab172a2750319f0",
+        "u2b-cap-02-1--complete-playbook-v2": "784326d84bc2bbb32bd7800a785e09629a7048bc9df34c9008052f5574a911a7",
+        "u2b-cap-02-1--gateway-double": "538e5c1a3927b6ea3eb711de3448de4d20d78c44ba186ff7a7fcef5cdceaad4a",
+        "u2b-cap-02-2--complete-playbook-v2": "e7ef92fe0d89d6cff723f9bce707ca1dde55a9e17e8ff3df1dbb0706e41ba3af",
+        "u2b-cap-02-2--gateway-double": "b128d62980ed02497ac746d4dd20ac7028616d176dfd6c5e51894a355c4730d4",
+        "u2b-cap-03-1--complete-playbook-v2": "637b4eeb239ec8a3a1baf08816033cba8981e17d2dc4742bcc5c20fe4f70704b",
+        "u2b-cap-03-1--gateway-double": "885bd5eb2210a212e193ead20fa3c9d8978a52bd4236d592d5905ec6a34faf59",
+        "u2b-cap-03-2--complete-playbook-v2": "9858e1437206131350434e59d4928f231421649c477043741fbe6c49f87d260f",
+        "u2b-cap-03-2--gateway-double": "f043499c142c0042e6297f92c77ed6c98c77fdfcb8a364105f6449fd59b8ca11",
+        "u2b-cap-04-1--complete-playbook-v2": "0a34bd5fc7b26bcb7e4c56c3bd227f318f119250a863054421c8bb1e65bc80bf",
+        "u2b-cap-04-1--gateway-double": "d93cd4b2071132123d9a9675dbc4aba5e4b6e93adf7151e65ba1f2fe7dfffc75",
+        "u2b-cap-04-2--complete-playbook-v2": "401f32299c302accc5a7a32db0f8d1a8499e16bf1f0bae0a3d946ec6e90fdd17",
+        "u2b-cap-04-2--gateway-double": "19684600c005dc1441df738528f3242d8780645c953a8b2c2ce418d30f570361",
+        "u2b-cap-05-1--complete-playbook-v2": "88a9d238f04fc6b2f3f58bc611b33130274d607c7c954f47a6a84686a4dfe451",
+        "u2b-cap-05-1--gateway-double": "96566bec140e73a89f6f7243b42379e6afa52c64bc29025a60e72574b3be4b0b",
+        "u2b-cap-05-2--complete-playbook-v2": "787c651773db8c391a397ddf343bbda04bd2b778658df2d4991cd9f726871f96",
+        "u2b-cap-05-2--gateway-double": "bef1b3cbd929b1e7337402d0358a6dcfa10d8bb1b91740436ea91814636195a5",
+        "u2b-cap-06-1--complete-playbook-v2": "bfd12ce68658b869084d981e2c5cbc922ad5bfa1cd988cd82f160bd0dd4a30e2",
+        "u2b-cap-06-1--gateway-double": "99ba27a2d3b1fbc6d90aee16853eeb42cfb5b7a23e9f14a7b25cd08b47dd89af",
+        "u2b-cap-06-2--complete-playbook-v2": "74c7e6202f76d370010d4e6109d609f5bdd081e1a6cb4d350657c61711523146",
+        "u2b-cap-06-2--gateway-double": "f2315d74d1825a00202a488046f031a96e4b277c800b84344d1fe17d2fbc9855"
+      },
+      "redacted_cases_sha256": "53636359a4cc85caf4ce1ec56cc929a61273a3b78c5cb9fb2426ac0d8c01f0d7"
+    }
+  },
+  "authority": "First U2B offline reports independently reviewed on 2026-10-12; hashes are attribution, not signatures."
+}

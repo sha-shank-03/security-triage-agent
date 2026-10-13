@@ -1,0 +1,28 @@
+name: upgrade-offline-integrity
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  pure-contracts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      # Reuse the already frozen action revisions; no new dependency resolution.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.11'
+      - name: Frozen data and redacted first-report integrity
+        run: |
+          python -m evaluation.upgrade_dataset --verify
+          python -m evaluation.upgrade_public --validate docs/evidence/U2B_FIRST_SUMMARY.json
+      - name: Provider and sandbox failure contracts with dispatch blocked
+        run: python -m evaluation.upgrade_ci

@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "case_id": "u2b-dev-06-2",
+  "snapshot_version": 1,
+  "window_start": "2026-10-12T09:00:00Z",
+  "cutoff": "2026-10-12T10:00:00Z",
+  "alert": {
+    "user_id": "u2b-dev-06-2-user",
+    "device_id": "u2b-dev-06-2-alert-device",
+    "ip": "198.51.100.21",
+    "session_id": "u2b-dev-06-2-session",
+    "priority": "HIGH"
+  },
+  "records": [
+    {
+      "id": "u2b-dev-06-2-identity",
+      "kind": "identity",
+      "version": 1,
+      "event_time": "2026-10-12T08:00:00Z",
+      "ingested_at": "2026-10-12T08:00:00Z",
+      "data": {
+        "user_id": "u2b-dev-06-2-user",
+        "privileged": false
+      }
+    },
+    {
+      "id": "u2b-dev-06-2-device",
+      "kind": "device",
+      "version": 2,
+      "event_time": "2026-10-12T08:00:00Z",
+      "ingested_at": "2026-10-12T08:00:00Z",
+      "data": {
+        "user_id": "u2b-dev-06-2-user",
+        "device_id": "u2b-dev-06-2-device",
+        "managed": true
+      }
+    },
+    {
+      "id": "u2b-dev-06-2-network",
+      "kind": "network",
+      "version": 1,
+      "event_time": "2026-10-12T08:00:00Z",
+      "ingested_at": "2026-10-12T08:00:00Z",
+      "data": {
+        "user_id": "u2b-dev-06-2-user",
+        "ip": "198.51.100.21",
+        "approved": false,
+        "valid_from": "2026-10-01T00:00:00Z",
+        "valid_to": "2026-10-12T08:30:00Z"
+      }
+    },
+    {
+      "id": "u2b-dev-06-2-coverage-auth",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-10-12T08:00:00Z",
+      "ingested_at": "2026-10-12T08:00:00Z",
+      "data": {
+        "user_id": "u2b-dev-06-2-user",
+        "stream": "auth",
+        "complete": true,
+        "gap": "",
+        "from": "2026-10-12T09:00:00Z",
+        "to": "2026-10-12T10:00:00Z"
+      }
+    },
+    {
+      "id": "u2b-dev-06-2-coverage-resource",
+      "kind": "coverage",
+      "version": 1,
+      "event_time": "2026-10-12T08:00:00Z",
+      "ingested_at": "2026-10-12T08:00:00Z",
+      "data": {
+        "user_id": "u2b-dev-06-2-user",
+        "stream": "resource",
+        "complete": true,
+        "gap": "",
+        "from": "2026-10-12T09:00:00Z",
+        "to": "2026-10-12T10:00:00Z"
+      }
+    },
+    {
+      "id": "u2b-dev-06-2-success",
+      "kind": "auth",
+      "version": 1,
+      "event_time": "2026-10-12T09:50:00Z",
+      "ingested_at": "2026-10-12T09:50:00Z",
+      "data": {
+        "user_id": "u2b-dev-06-2-user",
+        "session_id": "u2b-dev-06-2-session",
+        "device_id": "u2b-dev-06-2-device",
+        "ip": "198.51.100.21",
+        "outcome": "success",
+        "mfa": "satisfied"
+      }
+    },
+    {
+      "id": "u2b-dev-06-2-ordinary-0",
+      "kind": "resource",
+      "version": 1,
+      "event_time": "2026-10-12T09:55:00Z",
+      "ingested_at": "2026-10-12T09:55:00Z",
+      "data": {
+        "user_id": "u2b-dev-06-2-user",
+        "session_id": "u2b-dev-06-2-session",
+        "sensitive": false
+      }
+    },
+    {
+      "id": "u2b-dev-06-2-late-approved-network",
+      "kind": "network",
+      "version": 2,
+      "event_time": "2026-10-12T09:40:00Z",
+      "ingested_at": "2026-10-12T11:00:00Z",
+      "data": {
+        "user_id": "u2b-dev-06-2-user",
+        "ip": "198.51.100.21",
+        "approved": true,
+        "valid_from": "2026-10-12T09:00:00Z",
+        "valid_to": "2026-10-12T10:00:00Z"
+      }
+    }
+  ]
+}

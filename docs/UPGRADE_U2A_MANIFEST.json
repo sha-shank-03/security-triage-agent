@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "version": "industry-u2a-source-v1",
+  "date": "2026-10-12",
+  "base_public_commit": "ce934d877bf999141e8aa09c6d904e74048b356d",
+  "previous_manifest_sha256": "03286cef620e30bc45a274849d6b44579bdaab4be0aadf5b6d98d3654f813e24",
+  "accepted_u1_actor_code_sha256": "044534ac943f15fcff8077326478ef3cd011b4fbf025daf9f9a88574fc19aa15",
+  "accepted_u1_main_review_sha256": "6e46aace09c9fd61febd3c4e07d91549b45301fc94ddba4c3e25d3985f64576e",
+  "accepted_u1_at": "2026-10-12T06:45:14.887496+00:00",
+  "actor_code_sha256": "741a76556ec24df64b1bdc07fab45d26c355e25fb0c66d641c0dfbe9aabfe5de",
+  "actor_fingerprint_recipe": "SHA256 of canonical sorted repository-relative top-level security_triage/*.py -> SHA256 mapping",
+  "files": {
+    "README.md": "e85eaa45cbe5ea358e74fc2be5f7336ab9a269447631b99f5d4b6b81d23e6231",
+    "docs/UPGRADE_U1.md": "380065bf5e8f98beac7a2fa176b0ade3597ba397f8e01664b779eb3f7b130365",
+    "evaluation/upgrade_verify.py": "92b1ce8c574b61dc98afdf9a035b52111cf6cb3f6aeedc53e1e94c88de597060",
+    "security_triage/gateway.py": "1ec8f482656c1c7dbbd0c9793b50e90dcc431c0aaac3bcf1ee6827017da290a8",
+    "security_triage/transport_worker.py": "f319503375d226be06eff692a4609de4112742b8f6557c5fe24514232ad06a1c",
+    "security_triage/upgrade.py": "71bb91df951b55f05b756b966141ac39844e7478b35127ca394316cf76e486b8",
+    "security_triage/upgrade_double.py": "00cf6d7825ff7eadef34336c7cd62b33a18e47ea340374f00743cd6c0a08d0f6",
+    "security_triage/upgrade_events.py": "a4df392d986003cc35a1497deb02fdd5042d3bdbb073162963803f6f12017615",
+    "security_triage/upgrade_runtime.py": "35ba3c65116df9c7b4a4e4453f92b53ac0ad021d62bb9c1eb4adf4a1d1a3effa",
+    "security_triage/upgrade_state.py": "8aa3bb8a53532d8dd4f70eeefea99725ca7fb2f9d4be8b1fe033b93d245e62ec",
+    "security_triage/upgrade_transport.py": "7af86e1e53833023311128836021466e1a6c5c1cc1406994594fe9ba9e898ea3",
+    "tests/test_upgrade_deadline.py": "e03b32991ca4be53e81b55896e9ef17262bbd03726798865d3088b8e9d406cf0",
+    "tests/test_upgrade_events.py": "0c8952e55d260f023977fba6d371647cf184745b0abd3ff0156ad27ac97ed48d",
+    "tests/test_upgrade_gateway.py": "e57201de45e50b338343201fc287e12a076cdc98baa00088594cc7e29ca47d7a",
+    "tests/test_upgrade_spend.py": "b5facd918552ab17ebea47a61a495e8feb5422fe670263483b1937fc5af4ada2",
+    "tests/test_upgrade_transport.py": "d8fec4f188a8c960ad68eaa42dab45e703f018a816a7f70e8c1383ac28e6ad95",
+    "docs/UPGRADE_U1_MANIFEST.json": "ed1270a9f370b63210b28f14d7710d49be7a3cbe77fed3caf73714440edc4c4a",
+    "docs/UPGRADE_U1_MANIFEST_V2.json": "0c26d4d8479cc2272a54f218c7511f410b197734dbcb5ba18d15419fe9428fa0",
+    "security_triage/sandbox.py": "441a110f8fe16dea6b658706fc15139bd60ddfcf464515db8e5917a4d627a24f",
+    "security_triage/sandbox_transport.py": "4c467e0b29c117d41c3d23d6c277a81b2bf16a2480c20aa3843f5363b8934f06",
+    "security_triage/sandbox_worker.py": "c719260ed9f4248ad4d7f4301e17a858941135cb9e9de4d437a71f5a84cc75d8",
+    "tests/test_upgrade_sandbox.py": "bd45923bf8446fb80e9cae0b9244741cfcf6dfb51c02563c143a817d9f392468",
+    "tests/test_upgrade_sandbox_http.py": "f1f6da88a42683bc7eb3f2cb80ca0a46c65fe7aaec7b28bf268e4db37e408e4f",
+    "docs/UPGRADE_U2A.md": "78668b6d64dd4347940afc5482df619992a614da6fe62b15b099cf1a0711fc4b",
+    "docs/UPGRADE_U1_MANIFEST_V3.json": "03286cef620e30bc45a274849d6b44579bdaab4be0aadf5b6d98d3654f813e24"
+  },
+  "manifest_self_excluded": true,
+  "source_modified": [
+    "README.md"
+  ],
+  "source_added": [
+    "security_triage/sandbox.py",
+    "security_triage/sandbox_transport.py",
+    "security_triage/sandbox_worker.py",
+    "tests/test_upgrade_sandbox.py",
+    "tests/test_upgrade_sandbox_http.py",
+    "docs/UPGRADE_U2A.md"
+  ],
+  "README_before_sha256": "b332c2c7ee137522d21c9fe1285df9ec458eb032af9218ad26a63951076dbabe",
+  "README_original126_prefix_preserved": true,
+  "original_freezes": {
+    "evaluation/development_freeze.json": {
+      "manifest_digest": "c24d2589a14b43a6ca9ae06ed7a6d5e9af955f808418c1c362cfd1e8f809d1c9",
+      "source_files_verified": 17,
+      "artifact_sha256": "4dfd40f80678f42b923b806e8d02f52bf79ddec3d1e120b5cf1532535e06e27a"
+    },
+    "evaluation/heldout-v1-freeze.json": {
+      "manifest_digest": "95c943961e711d67226d1ecd49f90c33e05b94338d1c80c37f30dee9603d1859",
+      "source_files_verified": 62,
+      "artifact_sha256": "66fefe612545ebf354ca6c1b5e1fba776be5677ce9d7d768c0add45f59ce8528"
+    }
+  },
+  "old_U1_modules_byte_identical": true,
+  "status": "source_pure_handoff_ready_main_U2A_acceptance_pending",
+  "scope": "read-only GitHub Issues adapter; separate future write intent/reconciliation design only",
+  "api_version": "2026-03-10",
+  "credential_permissions": {
+    "issues": "read",
+    "metadata": "read"
+  },
+  "identity_limit": "Installation/app IDs and permission grant are trusted-loader attestations; repository/account identity and single-repo access are cross-checked with GET. Public GET success alone does not prove token identity.",
+  "evidence": {
+    "U2A_pure_methods_passed": 21,
+    "native_HTTP": "prepared_unexecuted",
+    "actual_sandbox": "unexecuted",
+    "writes": "unimplemented",
+    "live_model": "unexecuted"
+  },
+  "attribution": "U1 88-test main acceptance remains bound to its V3 manifest and old actor fingerprint; U2A additions change future run fingerprint. No old receipt or freeze is rebound."
+}

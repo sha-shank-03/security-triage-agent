@@ -1,0 +1,232 @@
+{
+  "version": "worker-exposed-u2b-v1",
+  "split": "development",
+  "exposure": "worker-exposed",
+  "inputs_sha256": "8cdcd22f38af495b031e75b4e3dd36edc68d34b0bf8a438438ff7b5c74604b44",
+  "cases": [
+    {
+      "case_id": "u2b-dev-01-1",
+      "family": "legitimate-login",
+      "world_truth": "BENIGN",
+      "allowed_dispositions": [
+        "BENIGN"
+      ],
+      "allowed_urgencies": [
+        "LOW"
+      ],
+      "severity_stratum": "LOW",
+      "required_gaps": [],
+      "expected_proposal": null,
+      "rationale": "Supported misuse outranks gaps; benign needs complete corroboration; remaining uncertainty hands off.",
+      "label_exposure": "worker-exposed",
+      "author": "worker",
+      "reviewer": "same-author; main independent review pending"
+    },
+    {
+      "case_id": "u2b-dev-01-2",
+      "family": "legitimate-login",
+      "world_truth": "BENIGN",
+      "allowed_dispositions": [
+        "BENIGN"
+      ],
+      "allowed_urgencies": [
+        "LOW"
+      ],
+      "severity_stratum": "LOW",
+      "required_gaps": [],
+      "expected_proposal": null,
+      "rationale": "Supported misuse outranks gaps; benign needs complete corroboration; remaining uncertainty hands off.",
+      "label_exposure": "worker-exposed",
+      "author": "worker",
+      "reviewer": "same-author; main independent review pending"
+    },
+    {
+      "case_id": "u2b-dev-02-1",
+      "family": "observed-misuse",
+      "world_truth": "ESCALATE",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "severity_stratum": "HIGH",
+      "required_gaps": [],
+      "expected_proposal": null,
+      "rationale": "Supported misuse outranks gaps; benign needs complete corroboration; remaining uncertainty hands off.",
+      "label_exposure": "worker-exposed",
+      "author": "worker",
+      "reviewer": "same-author; main independent review pending"
+    },
+    {
+      "case_id": "u2b-dev-02-2",
+      "family": "observed-misuse",
+      "world_truth": "ESCALATE",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "severity_stratum": "HIGH",
+      "required_gaps": [],
+      "expected_proposal": null,
+      "rationale": "Supported misuse outranks gaps; benign needs complete corroboration; remaining uncertainty hands off.",
+      "label_exposure": "worker-exposed",
+      "author": "worker",
+      "reviewer": "same-author; main independent review pending"
+    },
+    {
+      "case_id": "u2b-dev-03-1",
+      "family": "positive-misuse-with-gaps",
+      "world_truth": "ESCALATE",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "severity_stratum": "MEDIUM",
+      "required_gaps": [
+        "u2b-dev-03-1-coverage-auth"
+      ],
+      "expected_proposal": null,
+      "rationale": "Supported misuse outranks gaps; benign needs complete corroboration; remaining uncertainty hands off.",
+      "label_exposure": "worker-exposed",
+      "author": "worker",
+      "reviewer": "same-author; main independent review pending"
+    },
+    {
+      "case_id": "u2b-dev-03-2",
+      "family": "positive-misuse-with-gaps",
+      "world_truth": "ESCALATE",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "severity_stratum": "MEDIUM",
+      "required_gaps": [
+        "u2b-dev-03-2-coverage-resource"
+      ],
+      "expected_proposal": null,
+      "rationale": "Supported misuse outranks gaps; benign needs complete corroboration; remaining uncertainty hands off.",
+      "label_exposure": "worker-exposed",
+      "author": "worker",
+      "reviewer": "same-author; main independent review pending"
+    },
+    {
+      "case_id": "u2b-dev-04-1",
+      "family": "unresolved-telemetry",
+      "world_truth": "INCONCLUSIVE",
+      "allowed_dispositions": [
+        "INCONCLUSIVE"
+      ],
+      "allowed_urgencies": [
+        "MEDIUM"
+      ],
+      "severity_stratum": "MEDIUM",
+      "required_gaps": [
+        "u2b-dev-04-1-coverage-auth"
+      ],
+      "expected_proposal": null,
+      "rationale": "Supported misuse outranks gaps; benign needs complete corroboration; remaining uncertainty hands off.",
+      "label_exposure": "worker-exposed",
+      "author": "worker",
+      "reviewer": "same-author; main independent review pending"
+    },
+    {
+      "case_id": "u2b-dev-04-2",
+      "family": "unresolved-telemetry",
+      "world_truth": "INCONCLUSIVE",
+      "allowed_dispositions": [
+        "INCONCLUSIVE"
+      ],
+      "allowed_urgencies": [
+        "MEDIUM"
+      ],
+      "severity_stratum": "MEDIUM",
+      "required_gaps": [
+        "u2b-dev-04-2-coverage-resource"
+      ],
+      "expected_proposal": null,
+      "rationale": "Supported misuse outranks gaps; benign needs complete corroboration; remaining uncertainty hands off.",
+      "label_exposure": "worker-exposed",
+      "author": "worker",
+      "reviewer": "same-author; main independent review pending"
+    },
+    {
+      "case_id": "u2b-dev-05-1",
+      "family": "unrelated-identity-session",
+      "world_truth": "INCONCLUSIVE",
+      "allowed_dispositions": [
+        "INCONCLUSIVE"
+      ],
+      "allowed_urgencies": [
+        "LOW"
+      ],
+      "severity_stratum": "LOW",
+      "required_gaps": [],
+      "expected_proposal": null,
+      "rationale": "Supported misuse outranks gaps; benign needs complete corroboration; remaining uncertainty hands off.",
+      "label_exposure": "worker-exposed",
+      "author": "worker",
+      "reviewer": "same-author; main independent review pending"
+    },
+    {
+      "case_id": "u2b-dev-05-2",
+      "family": "unrelated-identity-session",
+      "world_truth": "INCONCLUSIVE",
+      "allowed_dispositions": [
+        "INCONCLUSIVE"
+      ],
+      "allowed_urgencies": [
+        "LOW"
+      ],
+      "severity_stratum": "LOW",
+      "required_gaps": [],
+      "expected_proposal": null,
+      "rationale": "Supported misuse outranks gaps; benign needs complete corroboration; remaining uncertainty hands off.",
+      "label_exposure": "worker-exposed",
+      "author": "worker",
+      "reviewer": "same-author; main independent review pending"
+    },
+    {
+      "case_id": "u2b-dev-06-1",
+      "family": "stale-paged-drifted-review",
+      "world_truth": "ESCALATE",
+      "allowed_dispositions": [
+        "ESCALATE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "severity_stratum": "HIGH",
+      "required_gaps": [],
+      "expected_proposal": null,
+      "rationale": "Supported misuse outranks gaps; benign needs complete corroboration; remaining uncertainty hands off.",
+      "label_exposure": "worker-exposed",
+      "author": "worker",
+      "reviewer": "same-author; main independent review pending"
+    },
+    {
+      "case_id": "u2b-dev-06-2",
+      "family": "stale-paged-drifted-review",
+      "world_truth": "INCONCLUSIVE",
+      "allowed_dispositions": [
+        "INCONCLUSIVE"
+      ],
+      "allowed_urgencies": [
+        "HIGH"
+      ],
+      "severity_stratum": "HIGH",
+      "required_gaps": [],
+      "expected_proposal": null,
+      "rationale": "Supported misuse outranks gaps; benign needs complete corroboration; remaining uncertainty hands off.",
+      "label_exposure": "worker-exposed",
+      "author": "worker",
+      "reviewer": "same-author; main independent review pending"
+    }
+  ]
+}

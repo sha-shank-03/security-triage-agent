@@ -1,0 +1,95 @@
+{
+  "version": "worker-exposed-u2b-v1",
+  "split": "capability",
+  "exposure": "worker-exposed",
+  "fictional": true,
+  "license": "MIT",
+  "authoring_method": "Author-created correlated fictional family variants; no incident logs or model generation.",
+  "counts_change": "Main U2B narrows provisional18 development/24 capability to12/12; six families x2 per split.",
+  "cases": [
+    {
+      "case_id": "u2b-cap-01-1",
+      "family": "legitimate-login",
+      "file": "fixtures/upgrade/capability/u2b-cap-01-1.json",
+      "sha256": "864f7dbc4fccb5cde02a6dd841cf36c50ec8b3eb2f2b3ebd3b0e498c1a4ce2f4",
+      "semantic_sha256": "050a24760a46eaab588fc916aa7d6fd44dbec7579914d143aa4824a949beb6ec"
+    },
+    {
+      "case_id": "u2b-cap-01-2",
+      "family": "legitimate-login",
+      "file": "fixtures/upgrade/capability/u2b-cap-01-2.json",
+      "sha256": "a1eb62067e9316a918f6b14a5f41afb38c5436a3c76368eb5f1b68810ee6be4a",
+      "semantic_sha256": "bfb9bc6e0caccc2b73a714dbfa79bbf692b56269672c3ddb2831f3cbc9004537"
+    },
+    {
+      "case_id": "u2b-cap-02-1",
+      "family": "observed-misuse",
+      "file": "fixtures/upgrade/capability/u2b-cap-02-1.json",
+      "sha256": "d17752125b99dc4218b9564e9540ea22e7aa41a225b60a25e2291c0b7e7de972",
+      "semantic_sha256": "f8955dc5df9e4ecf1bf4045f84688f2c38bd2662ddf8f47e4b3cad8f7e40c31f"
+    },
+    {
+      "case_id": "u2b-cap-02-2",
+      "family": "observed-misuse",
+      "file": "fixtures/upgrade/capability/u2b-cap-02-2.json",
+      "sha256": "853f7080cfdc963d313a9eeb79591ad85ca4656384e473ac9d76b28dc3bdf8a5",
+      "semantic_sha256": "e09d985b01585e2f5b17c9cbc7b1293781a988f1af86efdaf9ba663544d9aaef"
+    },
+    {
+      "case_id": "u2b-cap-03-1",
+      "family": "positive-misuse-with-gaps",
+      "file": "fixtures/upgrade/capability/u2b-cap-03-1.json",
+      "sha256": "b531b75e16fc93c00dc217bd69686a07744f464a70ebac240e020c12b13ebad3",
+      "semantic_sha256": "a063dee7e04bc019ca79b30938796f16c830efb3fececaab1b2a9287a9a7fe54"
+    },
+    {
+      "case_id": "u2b-cap-03-2",
+      "family": "positive-misuse-with-gaps",
+      "file": "fixtures/upgrade/capability/u2b-cap-03-2.json",
+      "sha256": "11e47bd36f0c7d92bff8cdcd1a4de888d00096917b6d7819b6f5b09e51bef847",
+      "semantic_sha256": "eaaa6a46c7ca9240449d121a8b9c6ebb846d5cf6163fc2bc93b8d4c6a1f1acf8"
+    },
+    {
+      "case_id": "u2b-cap-04-1",
+      "family": "unresolved-telemetry",
+      "file": "fixtures/upgrade/capability/u2b-cap-04-1.json",
+      "sha256": "6db3c5c5b2e793bcceec77a97018332663442b7b10317cca0ffd79db985383d5",
+      "semantic_sha256": "a4fbc0160f622d7de105bd8788cfc2982e08b77d801df7b5590164ec07bd4dc7"
+    },
+    {
+      "case_id": "u2b-cap-04-2",
+      "family": "unresolved-telemetry",
+      "file": "fixtures/upgrade/capability/u2b-cap-04-2.json",
+      "sha256": "2a13906935d17fb8c3d4515862b03a3252675b12c4901705b3a67b154438fc77",
+      "semantic_sha256": "93be78b51d58b705772d7cc394f57a1316436e3298c37288d9b8b8ac488deff6"
+    },
+    {
+      "case_id": "u2b-cap-05-1",
+      "family": "unrelated-identity-session",
+      "file": "fixtures/upgrade/capability/u2b-cap-05-1.json",
+      "sha256": "2242cf76098cdc747e9b5088d6cd01fade4143498760bf8b63ceb29cb18420b1",
+      "semantic_sha256": "783f74c728a048f4fb1d59eefc5643c8c8d0a964d2e1f8de07d6e3e0a827d43a"
+    },
+    {
+      "case_id": "u2b-cap-05-2",
+      "family": "unrelated-identity-session",
+      "file": "fixtures/upgrade/capability/u2b-cap-05-2.json",
+      "sha256": "c5fe8292323020c5e59f33ba4d617f8f8c6501288974df744a2bf058ae11693b",
+      "semantic_sha256": "26bce2104d71d39a31c3a12e3e7fb75b064b1b7624572b38e0957a7844493324"
+    },
+    {
+      "case_id": "u2b-cap-06-1",
+      "family": "stale-paged-drifted-review",
+      "file": "fixtures/upgrade/capability/u2b-cap-06-1.json",
+      "sha256": "3c051e2ef782acf3d4d9c9e2493a7ec161c8470fe2f54933dd146a6b0153ac39",
+      "semantic_sha256": "702544786ca2f676d929a4b06e334b31ba162fed1239206a65a6d0e1870daec5"
+    },
+    {
+      "case_id": "u2b-cap-06-2",
+      "family": "stale-paged-drifted-review",
+      "file": "fixtures/upgrade/capability/u2b-cap-06-2.json",
+      "sha256": "b89fa327f7bd4e28be986d0a04284082829ee92aee130d5fe00375bae6de4280",
+      "semantic_sha256": "86e26277fd8be41df32826bbc6cb6da6c96bc139850df7069abac4301d538b13"
+    }
+  ]
+}
